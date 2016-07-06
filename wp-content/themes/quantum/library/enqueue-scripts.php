@@ -33,4 +33,5 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+	include("custom-post-types.php");
 endif;

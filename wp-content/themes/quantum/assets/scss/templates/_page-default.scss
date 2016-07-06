@@ -1,3 +1,8 @@
+main{
+  max-width:$global-width;
+  margin:0 auto;
+  clear:both;
+}
 #page {
   @include grid-row();
   margin-top: 3rem;
