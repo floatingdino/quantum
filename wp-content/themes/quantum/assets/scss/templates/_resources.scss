@@ -1,4 +1,4 @@
-.page-template-resources{
+.page-resources{
   h1{
     text-align:center;
     font-size:rem-calc(50);
@@ -26,7 +26,16 @@
     @include grid-row();
   }
   article{
-    .hero{
+    margin-bottom:20px;
+    @include grid-column(12);
+    @include breakpoint(medium){
+      @include grid-column(6);
+      margin-bottom:30px;
+    }
+    @include breakpoint(large){
+      @include grid-column(3);
+    }
+    .wp-post-image{
       width:100%;
       height:auto;
     }
@@ -38,25 +47,23 @@
       margin: 0 0 15px 0;
     }
     p.article-details{
+      display:inline-block;
       font-size:12px;
       margin:20px 0;
     }
-    color:$white;
-    @include grid-column(12);
-    @include breakpoint(medium){
-      @include grid-column(3);
-    }
-    &.news{
+
+    div.article-body{
       background-color:#a6a6a6;
+      color:$white;
     }
-    &.whitepaper{
+    &.whitepapers div.article-body{
       background-color:$navy;
     }
-    &.resource{
+    &.resources div.article-body{
       background-color:$white;
       color:$navy;
     }
-    &.highlight{
+    &.highlight div.article-body, &.events div.article-body{
       background-color:$orange;
     }
   }

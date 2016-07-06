@@ -491,8 +491,8 @@ button {
     margin-right: -0.625rem; }
     @media screen and (min-width: 40em) {
       .row .row {
-        margin-left: -0.625rem;
-        margin-right: -0.625rem; } }
+        margin-left: -0.9375rem;
+        margin-right: -0.9375rem; } }
     .row .row.collapse {
       margin-left: 0;
       margin-right: 0; }
@@ -509,8 +509,8 @@ button {
   padding-right: 0.625rem; }
   @media screen and (min-width: 40em) {
     .column, .columns {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
   .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
     float: right; }
   .column.end:last-child:last-child, .end.columns:last-child:last-child {
@@ -985,8 +985,8 @@ button {
     margin-left: 0;
     margin-right: 0; }
   .medium-uncollapse > .column, .medium-uncollapse > .columns {
-    padding-left: 0.625rem;
-    padding-right: 0.625rem; }
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; }
   .medium-centered {
     float: none;
     margin-left: auto;
@@ -1194,8 +1194,8 @@ button {
     margin-left: 0;
     margin-right: 0; }
   .large-uncollapse > .column, .large-uncollapse > .columns {
-    padding-left: 0.625rem;
-    padding-right: 0.625rem; }
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; }
   .large-centered {
     float: none;
     margin-left: auto;
@@ -3868,13 +3868,14 @@ a::after {
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  border-top: 1px solid #ccc;
-  margin-top: 3.75rem; }
+  margin-top: 7.5rem;
+  background-color: #143c6e;
+  color: #fff; }
   #footer-container #footer {
     max-width: 70rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 1.875rem 0; }
+    padding: 5.625rem 0 1.5625rem 0; }
     #footer-container #footer::before, #footer-container #footer::after {
       content: ' ';
       display: table; }
@@ -3884,6 +3885,44 @@ a::after {
       list-style-type: none;
       margin: 0;
       padding: 0; }
+    #footer-container #footer article {
+      width: 100%;
+      padding: 0; }
+    #footer-container #footer .widget img {
+      display: inline-block; }
+    #footer-container #footer .half {
+      width: 100%;
+      float: left;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem; }
+      @media screen and (min-width: 40em) {
+        #footer-container #footer .half {
+          padding-left: 0.9375rem;
+          padding-right: 0.9375rem; } }
+      #footer-container #footer .half:last-child:not(:first-child) {
+        float: right; }
+      @media screen and (min-width: 40em) {
+        #footer-container #footer .half {
+          width: 50%;
+          float: left;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
+    #footer-container #footer .half {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+      @media screen and (min-width: 40em) {
+          #footer-container #footer .half:last-child:not(:first-child) {
+            float: right; } }
+    #footer-container #footer h1 {
+      font-style: italic;
+      font-size: 56px;
+      line-height: 1; }
+    #footer-container #footer p {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.8;
+      padding: 0 70px; }
 
 .sidebar {
   width: 100%;
@@ -3892,8 +3931,8 @@ a::after {
   padding-right: 0.625rem; }
   @media screen and (min-width: 40em) {
     .sidebar {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
   .sidebar:last-child:not(:first-child) {
     float: right; }
   @media screen and (min-width: 40em) {
@@ -3905,8 +3944,8 @@ a::after {
       margin-top: 1rem; } }
   @media screen and (min-width: 40em) and (min-width: 40em) {
     .sidebar {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
   @media screen and (min-width: 40em) {
       .sidebar:last-child:not(:first-child) {
         float: right; } }
@@ -3989,8 +4028,8 @@ body#tinymce {
     left: -41.66667%; }
     @media screen and (min-width: 40em) {
       #front-hero #watch {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     #front-hero #watch:last-child:not(:first-child) {
       float: right; }
     @media screen and (min-width: 40em) {
@@ -4003,8 +4042,8 @@ body#tinymce {
         left: 0%; } }
   @media screen and (min-width: 40em) and (min-width: 40em) {
     #front-hero #watch {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 40em) {
         #front-hero #watch:last-child:not(:first-child) {
           float: right; } }
@@ -4040,8 +4079,8 @@ body#tinymce {
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       #front-hero .tagline {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     #front-hero .tagline:last-child:not(:first-child) {
       float: right; }
     @media screen and (min-width: 40em) {
@@ -4053,8 +4092,8 @@ body#tinymce {
         padding-top: 6rem; } }
   @media screen and (min-width: 40em) and (min-width: 40em) {
     #front-hero .tagline {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 40em) {
         #front-hero .tagline:last-child:not(:first-child) {
           float: right; } }
@@ -4088,8 +4127,8 @@ body#tinymce {
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       .intro .fp-intro {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     .intro .fp-intro:last-child:not(:first-child) {
       float: right; }
     @media screen and (min-width: 40em) {
@@ -4101,8 +4140,8 @@ body#tinymce {
         margin-left: 8.33333%; } }
   @media screen and (min-width: 40em) and (min-width: 40em) {
     .intro .fp-intro {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 40em) {
         .intro .fp-intro:last-child:not(:first-child) {
           float: right; }
@@ -4133,8 +4172,8 @@ body#tinymce {
             box-sizing: border-box; }
     @media screen and (min-width: 40em) {
       .section-divider hr {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     .section-divider hr:last-child:not(:first-child) {
       float: right; }
 
@@ -4155,8 +4194,8 @@ body#tinymce {
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       .benefits header {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     .benefits header:last-child:not(:first-child) {
       float: right; }
     .benefits header h2 {
@@ -4178,8 +4217,8 @@ body#tinymce {
       .benefits .responsive,
       .benefits .customizable,
       .benefits .professional {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     .benefits .semantic:last-child:not(:first-child),
     .benefits .responsive:last-child:not(:first-child),
     .benefits .customizable:last-child:not(:first-child),
@@ -4199,8 +4238,8 @@ body#tinymce {
     .benefits .responsive,
     .benefits .customizable,
     .benefits .professional {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 40em) {
         .benefits .semantic:last-child:not(:first-child),
         .benefits .responsive:last-child:not(:first-child),
@@ -4241,8 +4280,8 @@ body#tinymce {
       clear: both; }
     @media screen and (min-width: 40em) {
       .benefits .why-foundation {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     .benefits .why-foundation:last-child:not(:first-child) {
       float: right; }
 
@@ -4263,8 +4302,8 @@ body#tinymce {
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       #kitchen-sink header {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     #kitchen-sink header:last-child:not(:first-child) {
       float: right; }
     #kitchen-sink header .lead {
@@ -4279,8 +4318,8 @@ body#tinymce {
       margin: 3rem 0; }
     @media screen and (min-width: 40em) {
       #kitchen-sink #components {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     #kitchen-sink #components:last-child:not(:first-child) {
       float: right; }
     @media screen and (min-width: 64em) {
@@ -4291,8 +4330,8 @@ body#tinymce {
         padding-right: 0.625rem; } }
   @media screen and (min-width: 64em) and (min-width: 40em) {
     #kitchen-sink #components {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 64em) {
         #kitchen-sink #components:last-child:not(:first-child) {
           float: right; } }
@@ -4308,8 +4347,8 @@ body#tinymce {
         float: right; } }
   @media screen and (min-width: 64em) and (min-width: 40em) {
     #kitchen-sink #kitchen-sink-nav {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 64em) {
         #kitchen-sink #kitchen-sink-nav:last-child:not(:first-child) {
           float: right; }
@@ -4354,6 +4393,9 @@ main {
   margin: 0 auto;
   clear: both; }
 
+.highlight {
+  color: #fe5205; }
+
 #page {
   max-width: 70rem;
   margin-left: auto;
@@ -4371,8 +4413,8 @@ main {
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       #page .main-content {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     #page .main-content:last-child:not(:first-child) {
       float: right; }
     @media screen and (min-width: 40em) {
@@ -4383,8 +4425,8 @@ main {
         padding-right: 0.625rem; } }
   @media screen and (min-width: 40em) and (min-width: 40em) {
     #page .main-content {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 40em) {
         #page .main-content:last-child:not(:first-child) {
           float: right; } }
@@ -4406,8 +4448,8 @@ main {
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       #page-sidebar-left .main-content {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     #page-sidebar-left .main-content:last-child:not(:first-child) {
       float: right; }
     @media screen and (min-width: 40em) {
@@ -4420,8 +4462,8 @@ main {
         left: 33.33333%; } }
   @media screen and (min-width: 40em) and (min-width: 40em) {
     #page-sidebar-left .main-content {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 40em) {
         #page-sidebar-left .main-content:last-child:not(:first-child) {
           float: right; } }
@@ -4432,8 +4474,8 @@ main {
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       #page-sidebar-left .sidebar {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     #page-sidebar-left .sidebar:last-child:not(:first-child) {
       float: right; }
     @media screen and (min-width: 40em) {
@@ -4447,8 +4489,8 @@ main {
         margin-top: 1rem; } }
   @media screen and (min-width: 40em) and (min-width: 40em) {
     #page-sidebar-left .sidebar {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 40em) {
         #page-sidebar-left .sidebar:last-child:not(:first-child) {
           float: right; } }
@@ -4470,8 +4512,8 @@ main {
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       #page-full-width .main-content {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     #page-full-width .main-content:last-child:not(:first-child) {
       float: right; }
 
@@ -4492,8 +4534,8 @@ main {
     padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       #single-post .main-content {
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
     #single-post .main-content:last-child:not(:first-child) {
       float: right; }
     @media screen and (min-width: 40em) {
@@ -4504,86 +4546,102 @@ main {
         padding-right: 0.625rem; } }
   @media screen and (min-width: 40em) and (min-width: 40em) {
     #single-post .main-content {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
     @media screen and (min-width: 40em) {
         #single-post .main-content:last-child:not(:first-child) {
           float: right; } }
 
-.page-template-resources h1 {
+.page-resources h1 {
   text-align: center;
   font-size: 3.125rem;
   font-style: italic;
   margin: 60px 0 0 0; }
 
-.page-template-resources ul.filters {
+.page-resources ul.filters {
   list-style: none;
   margin: 35px 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 1rem; }
-  .page-template-resources ul.filters li {
+  .page-resources ul.filters li {
     display: inline-block;
     padding: 0 10px; }
-    .page-template-resources ul.filters li:not(:last-child) {
+    .page-resources ul.filters li:not(:last-child) {
       border-right: 1px solid #9b9b9b; }
-    .page-template-resources ul.filters li.highlight {
+    .page-resources ul.filters li.highlight {
       color: #fe5205; }
 
-.page-template-resources section#articles {
+.page-resources section#articles {
   max-width: 70rem;
   margin-left: auto;
   margin-right: auto; }
-  .page-template-resources section#articles::before, .page-template-resources section#articles::after {
+  .page-resources section#articles::before, .page-resources section#articles::after {
     content: ' ';
     display: table; }
-  .page-template-resources section#articles::after {
+  .page-resources section#articles::after {
     clear: both; }
 
-.page-template-resources article {
-  color: #fff;
+.page-resources article {
+  margin-bottom: 20px;
   width: 100%;
   float: left;
   padding-left: 0.625rem;
   padding-right: 0.625rem; }
-  .page-template-resources article .hero {
-    width: 100%;
-    height: auto; }
-  .page-template-resources article div.content {
-    padding: 0 20px 20px 20px; }
-  .page-template-resources article h2 {
-    font-size: 26px;
-    margin: 0 0 15px 0; }
-  .page-template-resources article p.article-details {
-    font-size: 12px;
-    margin: 20px 0; }
   @media screen and (min-width: 40em) {
-    .page-template-resources article {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
-  .page-template-resources article:last-child:not(:first-child) {
+    .page-resources article {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  .page-resources article:last-child:not(:first-child) {
     float: right; }
   @media screen and (min-width: 40em) {
-    .page-template-resources article {
+    .page-resources article {
+      width: 50%;
+      float: left;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      margin-bottom: 30px; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
+    .page-resources article {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  @media screen and (min-width: 40em) {
+      .page-resources article:last-child:not(:first-child) {
+        float: right; } }
+  @media screen and (min-width: 64em) {
+    .page-resources article {
       width: 25%;
       float: left;
       padding-left: 0.625rem;
       padding-right: 0.625rem; } }
-  @media screen and (min-width: 40em) and (min-width: 40em) {
-    .page-template-resources article {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem; } }
-  @media screen and (min-width: 40em) {
-      .page-template-resources article:last-child:not(:first-child) {
+  @media screen and (min-width: 64em) and (min-width: 40em) {
+    .page-resources article {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  @media screen and (min-width: 64em) {
+      .page-resources article:last-child:not(:first-child) {
         float: right; } }
-  .page-template-resources article.news {
-    background-color: #a6a6a6; }
-  .page-template-resources article.whitepaper {
+  .page-resources article .wp-post-image {
+    width: 100%;
+    height: auto; }
+  .page-resources article div.content {
+    padding: 0 20px 20px 20px; }
+  .page-resources article h2 {
+    font-size: 26px;
+    margin: 0 0 15px 0; }
+  .page-resources article p.article-details {
+    display: inline-block;
+    font-size: 12px;
+    margin: 20px 0; }
+  .page-resources article div.article-body {
+    background-color: #a6a6a6;
+    color: #fff; }
+  .page-resources article.whitepapers div.article-body {
     background-color: #143c6e; }
-  .page-template-resources article.resource {
+  .page-resources article.resources div.article-body {
     background-color: #fff;
     color: #143c6e; }
-  .page-template-resources article.highlight {
+  .page-resources article.highlight div.article-body, .page-resources article.events div.article-body {
     background-color: #fe5205; }
 
 /*# sourceMappingURL=foundation.css.map */

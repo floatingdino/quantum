@@ -3,6 +3,9 @@ main{
   margin:0 auto;
   clear:both;
 }
+.highlight{
+  color:$orange;
+}
 #page {
   @include grid-row();
   margin-top: 3rem;

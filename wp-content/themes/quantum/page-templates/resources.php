@@ -6,7 +6,7 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <main role="main">
-	<h1> <?php the_title(); ?> </h1>
+	<h1> <?php single_post_title(); ?> </h1>
 	<ul class="filters">
 		<li class="highlight">News</li><li>Whitepapers</li><li>Resources</li><li>Events</li>
 	</ul>

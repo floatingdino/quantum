@@ -2,17 +2,41 @@
 	max-width: 100%;
 	width: 100%;
 	margin: 0 auto;
-	border-top: 1px solid #ccc;
-	margin-top: rem-calc(60);
-
+	// border-top: 1px solid #ccc;
+	margin-top: rem-calc(120);
+	background-color:$navy;
+	color:$white;
 	#footer {
 		@include grid-row();
-		padding: rem-calc(30) 0;
-
+		padding: rem-calc(90) 0 rem-calc(25) 0;
 		ul {
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
+		}
+		article{
+			width:100%;
+			padding:0;
+		}
+		.widget img{
+			display:inline-block;
+		}
+		.half{
+			@include grid-column(12);
+			@include breakpoint(medium){
+				@include grid-column(6);
+			}
+		}
+		h1{
+			font-style:italic;
+			font-size:56px;
+			line-height:1;
+		}
+		p{
+			font-size:18px;
+			font-weight:bold;
+			line-height:1.8;
+			padding:0 70px;
 		}
 	}
 }

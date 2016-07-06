@@ -51,5 +51,5 @@ function add_news_post_type() {
 	register_post_type( 'news', $args );
 
 }
-add_action( 'init', 'add_news_post_type', 0 );
+// add_action( 'init', 'add_news_post_type', 0 );
 ?>

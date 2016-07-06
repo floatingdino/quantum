@@ -47,5 +47,16 @@ require_once( 'library/sticky-posts.php' );
 /** Configure responsive image sizes */
 require_once( 'library/responsive-images.php' );
 
+function custom_excerpt_length(){
+  return 11;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+function new_excerpt_more(){
+  global $post;
+  remove_filter('excerpt_more', 'new_excerpt_more');
+  return '&#8230;';
+}
+add_filter('excerpt_more', 'new_excerpt_more', 999);
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
