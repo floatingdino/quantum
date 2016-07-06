@@ -40,28 +40,30 @@
 //  35. Tooltip
 //  36. Top Bar
 
-@import '../../components/foundation-sites/scss/util/util';
+@import '../../../bower_components/foundation-sites/scss/util/_util.scss';
 
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1080);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
+  primary: #143c6e,
+  secondary: #fe5205,
   success: #3adb76,
   warning: #ffae00,
   alert: #ec5840,
 );
-$light-gray: #e6e6e6;
+$light-gray: #e2e2e2;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
-$white: #fefefe;
-$body-background: $white;
-$body-font-color: $black;
+$white: #fff;
+$navy:#143c6e;
+$orange:#fe5205;
+$body-background: $light-gray;
+$body-font-color: $navy;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -380,7 +382,7 @@ $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
 $menu-item-color-active: $white;
-$menu-item-background-active: #121212;
+$menu-item-background-active: $light-gray;
 $menu-icon-spacing: 0.25rem;
 
 // 23. Meter
@@ -535,11 +537,11 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $black;
-$titlebar-color: $white;
+$titlebar-background: $light-gray;
+$titlebar-color: $navy;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
+$titlebar-icon-color: $navy;
 $titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 
@@ -558,8 +560,8 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: #121212;
+$topbar-background: $light-gray;
 $topbar-submenu-background: $topbar-background;
-$topbar-link-color: #fff;
+$topbar-link-color: $navy;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;

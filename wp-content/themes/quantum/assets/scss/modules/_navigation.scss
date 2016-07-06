@@ -1,5 +1,8 @@
 /* Navigation breakpoints */
-
+header#masthead{
+  max-width:$global-width;
+  margin:0 auto;
+}
 .desktop-menu, .top-bar-left {
   @include show-for(medium);
 }
@@ -28,31 +31,31 @@
 .top-bar {
 
   .menu .home a {
-    font-size: 1rem;
-    color: #B9B9B9;
+    font-size: 2rem;
+    color: $navy;
+    text-transform:uppercase;
   }
 
   .menu a {
-    height: 45px;
-    line-height: 45px;
-    color: #e6e6e6;
+    height: 100px;
+    line-height: 100px;
+    color: $navy;
     padding-top: 0;
     padding-bottom: 0;
     font-weight: bold;
-    font-size: 0.8rem;
-    line-height: 1;
-
+    font-size: 18px;
+    vertical-align:middle;
     &:hover:not(.button) {
-      background-color: #2a2a2a;
+      background-color: $light-gray;
     }
   }
 
-  .menu>li:not(.menu-text)>a { padding: 1rem; }
-  .menu li:not(:last-child) { border-right: 1px solid #4e4e4e; }
+  // .menu>li:not(.menu-text)>a { padding: 1rem; }
+  // .menu li:not(:last-child) { border-right: 1px solid #4e4e4e; }
 
   .dropdown.menu .submenu {
-    background-color: #121212;
-    color: #e6e6e6;
+    background-color: $light-gray;
+    color: $navy;
     border: 0;
   }
 
