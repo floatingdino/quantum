@@ -15,6 +15,7 @@
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+				<?php wp_nav_menu(array('container_class'=>'menu-footer', 'theme_location'=>'footer-nav'));?>
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
 		</div>

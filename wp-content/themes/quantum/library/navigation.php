@@ -10,6 +10,7 @@
 register_nav_menus(array(
 	'top-bar-r'  => 'Right Top Bar',
 	'mobile-nav' => 'Mobile',
+	'footer-nav' => 'Footer Menu',
 ));
 
 
@@ -50,6 +51,13 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 	}
 }
 
+function logo_hook($items, $args){
+	if($args->theme_location == 'footer-nav'){
+		$items = '<li class="home"><a href="' . esc_url(home_url()) . '">' . get_bloginfo('name') . '</a></li>' . $items;
+	}
+	return $items;
+}
+add_filter('wp_nav_menu_items', 'logo_hook', 10, 2);
 
 /**
  * Add support for buttons in the top-bar menu:

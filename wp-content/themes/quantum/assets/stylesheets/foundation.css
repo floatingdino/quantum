@@ -2209,12 +2209,6 @@ header#masthead {
   color: #B9B9B9; }
 
 /* Tablet and desktop menu */
-.top-bar .menu .home a {
-  font-size: 2rem;
-  color: #143c6e;
-  text-transform: uppercase;
-  padding-left: 0; }
-
 .top-bar .menu a {
   height: 120px;
   line-height: 120px;
@@ -2242,6 +2236,12 @@ header#masthead {
 li.is-dropdown-submenu-parent >
 a::after {
   display: none; }
+
+.menu .home a {
+  font-size: 2rem !important;
+  color: inherit;
+  text-transform: uppercase;
+  padding-left: 0; }
 
 /* Basic styles for post navigation. Nicolas Gallagher's "Micro clearfix" https://css-tricks.com/snippets/css/clear-fix/ */
 .post-navigation:before,
@@ -2346,6 +2346,13 @@ a::after {
       font-weight: bold;
       line-height: 1.8;
       padding: 0 70px; }
+    #footer-container #footer a {
+      color: #fff; }
+    #footer-container #footer #menu-footer-menu {
+      clear: both; }
+      #footer-container #footer #menu-footer-menu a {
+        font-weight: bold;
+        font-size: 18px; }
 
 .sidebar {
   width: 100%;

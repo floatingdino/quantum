@@ -38,5 +38,15 @@
 			line-height:1.8;
 			padding:0 70px;
 		}
+		a{
+			color:$white;
+		}
+		#menu-footer-menu{
+			clear:both;
+			a{
+			 font-weight:bold;
+			 font-size:18px;
+		 }
+		}
 	}
 }
