@@ -3150,4 +3150,24 @@ form#subscribe {
   .page-resources article.highlight div.article-body, .page-resources article.events div.article-body {
     background-color: #fe5205; }
 
+.page-resources .pagination {
+  display: none; }
+
+.visible {
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  opacity: 1; }
+
+div.brick-more {
+  display: block;
+  padding: 0 30px;
+  line-height: 45px;
+  background-color: #143c6e;
+  color: #fff;
+  text-align: center;
+  margin: 80px auto 20px auto;
+  width: 150px;
+  clear: both;
+  cursor: pointer; }
+
 /*# sourceMappingURL=foundation.css.map */

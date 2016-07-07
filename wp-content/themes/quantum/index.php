@@ -23,7 +23,7 @@
  	<section id="articles">
 		<?php do_action( 'foundationpress_before_content' ); ?>
  		<?php while ( have_posts() ) : the_post(); ?>
- 			<article class="<?php echo get_the_category()[0]->slug;?>">
+ 			<article class="<?php echo get_the_category()[0]->slug;?> item">
 				<div class="article-body">
 	 				<?php
 					if(has_post_thumbnail()){
@@ -39,6 +39,14 @@
  			</article>
  		<?php endwhile;?>
 		<?php do_action( 'foundationpress_after_content' ); ?>
- 	</section>
+		</section>
+		<div class="brick-more" onclick="loadNext()">View more</div>
+		<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
+			<nav id="post-nav">
+				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+			</nav>
+		<?php } ?>
+
  </main>
  <?php get_footer();

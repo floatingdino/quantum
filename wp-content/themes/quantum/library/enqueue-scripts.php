@@ -33,5 +33,15 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+	function brick(){
+		if(is_archive() || is_home()){
+			wp_enqueue_script('imagesloaded', get_template_directory_uri() . '/assets/javascript/custom/imagesloaded.pkgd.min.js');
+			wp_enqueue_script('masonry', get_template_directory_uri() . '/assets/javascript/custom/masonry.pkgd.min.js');
+			wp_enqueue_script('infinitescroll', get_template_directory_uri() . '/assets/javascript/custom/jquery.infinitescroll.min.js', array('jquery'));
+			wp_enqueue_script('mason', get_template_directory_uri() . '/assets/javascript/custom/mason.js', array('jquery','imagesloaded', 'masonry', 'infinitescroll'), '1.1', true);
+		}
+	}
+
+	add_action('wp_enqueue_scripts', 'brick');
 	include("custom-post-types.php");
 endif;
