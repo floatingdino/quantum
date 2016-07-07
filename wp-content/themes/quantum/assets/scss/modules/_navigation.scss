@@ -29,8 +29,18 @@ header#masthead{
 
 /* Tablet and desktop menu */
 .top-bar {
-
-  .menu a {
+  #menu-main-menu{
+    display:inline-block;
+    vertical-align:top;
+  }
+  div.phone{
+    &:before{
+      content:"\25aa";
+      display:inline-block;
+      margin-right:0.7rem;
+    }
+  }
+  .menu a, div.phone{
     height: 120px;
     line-height: 120px;
     color: $navy;
@@ -42,6 +52,13 @@ header#masthead{
     &:hover:not(.button) {
       background-color: $light-gray;
     }
+  }
+  div.phone{
+    display:table-cell;
+    padding-right:40px;
+  }
+  .social-menu i{
+    color:#8d8c8a;
   }
 
   // .menu>li:not(.menu-text)>a { padding: 1rem; }
@@ -111,4 +128,48 @@ header#masthead{
 }
 .nav-next {
 	float:right;
+}
+.menu-footer{
+  clear:both;
+  display:inline-block;
+  #menu-footer-menu{
+    display:inline-block;
+    a{
+      padding:0 1rem;
+    }
+    li:first-of-type a{
+      padding-left:0;
+    }
+  }
+}
+.social-menu{
+  float:right;
+  a{
+    padding:0 8px !important;
+  }
+  i{
+    font-size:16px;
+    margin-top:-2px;
+  }
+}
+div.phone{
+  display:table-cell;
+  vertical-align:top;
+  padding-right:40px;
+}
+.footer-links{
+  clear:both;
+  a{
+    line-height:70px !important;
+    padding:0 1rem;
+  }
+
+  div.phone{
+    color:$orange;
+    font-size:48px;
+    font-style:italic;
+    font-weight:bold;
+    text-align:right;
+    line-height:70px;
+  }
 }

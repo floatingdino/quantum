@@ -16,7 +16,7 @@
  get_header(); ?>
 
  <main class="page-resources" role="main">
- 	<h1> <?php single_post_title(); ?> </h1>
+ 	<h1> <?php single_post_title(); single_cat_title(); ?> </h1>
  	<ul class="filters">
 		<?php wp_list_categories(array('title_li'=>''));?>
  	</ul>

@@ -11,6 +11,8 @@ register_nav_menus(array(
 	'top-bar-r'  => 'Right Top Bar',
 	'mobile-nav' => 'Mobile',
 	'footer-nav' => 'Footer Menu',
+	'social-top' => 'Social Media Top Menu',
+	'social-footer' => 'Social Media Footer Menu',
 ));
 
 
@@ -58,6 +60,16 @@ function logo_hook($items, $args){
 	return $items;
 }
 add_filter('wp_nav_menu_items', 'logo_hook', 10, 2);
+function phone_hook($items, $args){
+	$phone_number = '1300 123 456';
+	if($args->theme_location == 'top-bar-r'){
+		$items .= '<div class="phone">' . $phone_number . '</div>';
+	}else if($args->theme_location == 'social-footer'){
+		$items = '<div class="phone">' . $phone_number . '</div>' . $items;
+	}
+	return $items;
+}
+add_filter('wp_nav_menu_items', 'phone_hook', 10, 2);
 
 /**
  * Add support for buttons in the top-bar menu:

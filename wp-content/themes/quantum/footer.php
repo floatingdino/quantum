@@ -15,7 +15,11 @@
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
-				<?php wp_nav_menu(array('container_class'=>'menu-footer', 'theme_location'=>'footer-nav'));?>
+				<div class="footer-links">
+					<?php wp_nav_menu(array('container_class'=>'menu-footer', 'theme_location'=>'footer-nav'));?>
+					<!-- <div class="phone">1300 123 456</div> -->
+					<?php wp_nav_menu(array('container_class'=>'social-menu', 'theme_location'=>'social-footer'));?>
+				</div>
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
 		</div>
