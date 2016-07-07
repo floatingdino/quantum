@@ -2230,10 +2230,6 @@ header#masthead {
   .top-bar .menu a:hover:not(.button), .top-bar div.phone:hover:not(.button) {
     background-color: #e2e2e2; }
 
-.top-bar div.phone {
-  display: table-cell;
-  padding-right: 40px; }
-
 .top-bar .social-menu i {
   color: #8d8c8a; }
 
@@ -2314,7 +2310,11 @@ a::after {
       padding-left: 0; }
 
 .social-menu {
-  float: right; }
+  float: right;
+  display: none; }
+  @media screen and (min-width: 64em) {
+    .social-menu {
+      display: inline-block; } }
   .social-menu a {
     padding: 0 8px !important; }
   .social-menu i {
@@ -2323,8 +2323,10 @@ a::after {
 
 div.phone {
   display: table-cell;
-  vertical-align: top;
-  padding-right: 40px; }
+  vertical-align: top; }
+  @media screen and (min-width: 64em) {
+    div.phone {
+      padding-right: 40px; } }
 
 .footer-links {
   clear: both; }
@@ -2883,7 +2885,7 @@ input {
 
 form#subscribe {
   display: block;
-  max-width: 840px;
+  max-width: 100%;
   width: 840px;
   float: right;
   margin: 60px 0; }
@@ -2891,7 +2893,7 @@ form#subscribe {
     display: inline-block;
     height: 65px;
     margin: 0;
-    max-width: 640px;
+    width: 640px;
     vertical-align: top;
     padding: 20px; }
   form#subscribe input[type="submit"] {
@@ -2901,6 +2903,11 @@ form#subscribe {
     max-width: 200px;
     width: 200px;
     text-align: center; }
+  @media screen and (max-width: 63.9375em) {
+    form#subscribe input {
+      width: 70%; }
+    form#subscribe input[type="submit"] {
+      width: 30%; } }
 
 #page {
   max-width: 70rem;
@@ -3169,5 +3176,8 @@ div.brick-more {
   width: 150px;
   clear: both;
   cursor: pointer; }
+  div.brick-more.finished {
+    cursor: default;
+    background-color: #8a8a8a; }
 
 /*# sourceMappingURL=foundation.css.map */

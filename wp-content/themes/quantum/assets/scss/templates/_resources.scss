@@ -86,4 +86,8 @@ div.brick-more{
   width:150px;
   clear:both;
   cursor:pointer;
+  &.finished{
+    cursor:default;
+    background-color:$dark-gray;
+  }
 }

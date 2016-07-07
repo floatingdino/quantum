@@ -53,10 +53,6 @@ header#masthead{
       background-color: $light-gray;
     }
   }
-  div.phone{
-    display:table-cell;
-    padding-right:40px;
-  }
   .social-menu i{
     color:#8d8c8a;
   }
@@ -144,6 +140,10 @@ header#masthead{
 }
 .social-menu{
   float:right;
+  display:none;
+  @include breakpoint(large){
+    display:inline-block;
+  }
   a{
     padding:0 8px !important;
   }
@@ -155,7 +155,9 @@ header#masthead{
 div.phone{
   display:table-cell;
   vertical-align:top;
-  padding-right:40px;
+  @include breakpoint(large){
+    padding-right:40px;
+  }
 }
 .footer-links{
   clear:both;
