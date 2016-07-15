@@ -50,7 +50,7 @@ header#masthead{
     font-size: 18px ;
     vertical-align:middle;
     &:hover:not(.button) {
-      background-color: $light-gray;
+      background-color: transparent;
     }
   }
   .social-menu i{
@@ -78,9 +78,13 @@ header#masthead{
 }
 .menu .home a {
   font-size: 2rem !important;
-  color: inherit;
+  color: transparent;
   text-transform:uppercase;
   padding-left:0;
+  background-image:url("../images/quantum.svg");
+  background-position:center;
+  width:210px;
+  background-repeat:no-repeat;
 }
 /* Basic styles for post navigation. Nicolas Gallagher's "Micro clearfix" https://css-tricks.com/snippets/css/clear-fix/ */
 .post-navigation:before,
@@ -136,6 +140,10 @@ header#masthead{
     li:first-of-type a{
       padding-left:0;
     }
+    .home a{
+      background-image:url('../images/quantum_light.svg');
+      color:transparent !important;
+    }
   }
 }
 .social-menu{
@@ -169,8 +177,7 @@ div.phone{
   div.phone{
     color:$orange;
     font-size:48px;
-    font-style:italic;
-    font-weight:bold;
+    @include italic-header();
     text-align:right;
     line-height:70px;
   }

@@ -1,7 +1,11 @@
 main{
-  max-width:$global-width;
+  width:$global-width;
   margin:0 auto;
   clear:both;
+  max-width:100%;
+}
+.page main{
+  width:100vw;
 }
 .highlight{
   color:$orange;

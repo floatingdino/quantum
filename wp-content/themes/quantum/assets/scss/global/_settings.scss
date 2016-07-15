@@ -537,7 +537,7 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $light-gray;
+$titlebar-background: transparent;
 $titlebar-color: $navy;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -560,8 +560,14 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: $light-gray;
+$topbar-background: transparent;
 $topbar-submenu-background: $topbar-background;
 $topbar-link-color: $navy;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
+
+@mixin italic-header{
+  font-weight:bold;
+  font-style:italic;
+  letter-spacing:-2px;
+}
