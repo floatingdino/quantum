@@ -37,6 +37,7 @@
 	 				</div>
 				</div>
  			</article>
+
  		<?php endwhile;?>
 		<?php do_action( 'foundationpress_after_content' ); ?>
 		</section>

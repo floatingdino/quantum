@@ -68,7 +68,7 @@ i.triangle{
   .column{
     @include grid-column(4);
     @include grid-column-collapse();
-    
+
     &:hover i.triangle:before{
       color:$orange;
     }
@@ -90,4 +90,108 @@ a.button{
   line-height:1;
   display:inline-block;
   font-size:20px;
+}
+.section-header{
+  width:1080px;
+  height:220px;
+  background-color:$medium-gray;
+  padding:35px;
+  margin:60px auto 100px auto;
+  background-size: cover;
+  background-repeat:no-repeat;
+  color:$white;
+  i:before{
+    color:$orange;
+  }
+}
+.block-container, .person-container{
+  width:900px;
+  margin:0 auto;
+}
+.bottom-details{
+  background-color:$light-gray;
+  padding:50px 10px;
+  .blurb, .person-details{
+    float:left;
+    vertical-align:middle;
+  }
+  .blurb{
+    width:100%;
+    @include breakpoint(medium){
+      width:40%;
+    }
+  }
+  .person-details{
+    width:100%;
+    @include breakpoint(medium){
+      width:58%;
+    }
+  }
+  .name, .contact{
+    float:left;
+    width:50%;
+  }
+  .headshot{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    background-color:$dark-gray;
+    float:left;
+    margin-right:15px;
+  }
+  .related-posts{
+    clear:both;
+  }
+  .contact ul{
+    list-style:none;
+    padding:0;
+    margin-top:10px;
+    li{
+      background-repeat:no-repeat;
+      line-height:2;
+      padding-left:30px;
+    }
+    li.email{
+      background-image:url(../images/mail.svg);
+      background-position:left center;
+    }
+    li.landline{
+      background-image:url(../images/phone.svg);
+      background-position:1.5px center;
+    }
+    li.mobile{
+      background-image:url(../images/mobile.svg);
+      background-position:4px center;
+    }
+  }
+  div.related-posts{
+    width:$global-width;
+    margin:30px auto 0 auto;
+    @include grid-row();
+    article{
+      height:132px;
+      @include grid-column(12);
+      @include breakpoint(medium){
+        @include grid-column(6);
+      }
+      img{
+        float:left;
+        width:195px;
+        margin-right:20px;
+      }
+      p.article-details{
+        font-size:12px;
+        line-height:1;
+        margin-bottom:20px;
+      }
+      h3{
+        margin:0;
+      }
+      .article-body{
+        background-color:$white;
+        overflow:hidden;
+        height:132px;
+      }
+    }
+  }
 }

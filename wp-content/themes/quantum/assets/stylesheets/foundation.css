@@ -425,7 +425,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #143c6e;
-  background: #e2e2e2;
+  background: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1672,7 +1672,7 @@ legend {
   padding: 1.25rem;
   margin: 1.125rem 0; }
   .fieldset legend {
-    background: #e2e2e2;
+    background: #fff;
     padding: 0 0.1875rem;
     margin: 0;
     margin-left: -0.1875rem; }
@@ -3099,6 +3099,9 @@ form#subscribe {
         #single-post .main-content:last-child:not(:first-child) {
           float: right; } }
 
+body.blog {
+  background-color: #e2e2e2; }
+
 .page-resources h1 {
   text-align: center;
   font-size: 3.125rem;
@@ -3308,5 +3311,118 @@ a.button {
   line-height: 1;
   display: inline-block;
   font-size: 20px; }
+
+.section-header {
+  width: 1080px;
+  height: 220px;
+  background-color: #9b9b9b;
+  padding: 35px;
+  margin: 60px auto 100px auto;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff; }
+  .section-header i:before {
+    color: #fe5205; }
+
+.block-container, .person-container {
+  width: 900px;
+  margin: 0 auto; }
+
+.bottom-details {
+  background-color: #e2e2e2;
+  padding: 50px 10px; }
+  .bottom-details .blurb, .bottom-details .person-details {
+    float: left;
+    vertical-align: middle; }
+  .bottom-details .blurb {
+    width: 100%; }
+    @media screen and (min-width: 40em) {
+      .bottom-details .blurb {
+        width: 40%; } }
+  .bottom-details .person-details {
+    width: 100%; }
+    @media screen and (min-width: 40em) {
+      .bottom-details .person-details {
+        width: 58%; } }
+  .bottom-details .name, .bottom-details .contact {
+    float: left;
+    width: 50%; }
+  .bottom-details .headshot {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #8a8a8a;
+    float: left;
+    margin-right: 15px; }
+  .bottom-details .related-posts {
+    clear: both; }
+  .bottom-details .contact ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px; }
+    .bottom-details .contact ul li {
+      background-repeat: no-repeat;
+      line-height: 2;
+      padding-left: 30px; }
+    .bottom-details .contact ul li.email {
+      background-image: url(../images/mail.svg);
+      background-position: left center; }
+    .bottom-details .contact ul li.landline {
+      background-image: url(../images/phone.svg);
+      background-position: 1.5px center; }
+    .bottom-details .contact ul li.mobile {
+      background-image: url(../images/mobile.svg);
+      background-position: 4px center; }
+  .bottom-details div.related-posts {
+    width: 70rem;
+    margin: 30px auto 0 auto;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto; }
+    .bottom-details div.related-posts::before, .bottom-details div.related-posts::after {
+      content: ' ';
+      display: table; }
+    .bottom-details div.related-posts::after {
+      clear: both; }
+    .bottom-details div.related-posts article {
+      height: 132px;
+      width: 100%;
+      float: left;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem; }
+      @media screen and (min-width: 40em) {
+        .bottom-details div.related-posts article {
+          padding-left: 0.9375rem;
+          padding-right: 0.9375rem; } }
+      .bottom-details div.related-posts article:last-child:not(:first-child) {
+        float: right; }
+      @media screen and (min-width: 40em) {
+        .bottom-details div.related-posts article {
+          width: 50%;
+          float: left;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
+    .bottom-details div.related-posts article {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+      @media screen and (min-width: 40em) {
+          .bottom-details div.related-posts article:last-child:not(:first-child) {
+            float: right; } }
+      .bottom-details div.related-posts article img {
+        float: left;
+        width: 195px;
+        margin-right: 20px; }
+      .bottom-details div.related-posts article p.article-details {
+        font-size: 12px;
+        line-height: 1;
+        margin-bottom: 20px; }
+      .bottom-details div.related-posts article h3 {
+        margin: 0; }
+      .bottom-details div.related-posts article .article-body {
+        background-color: #fff;
+        overflow: hidden;
+        height: 132px; }
 
 /*# sourceMappingURL=foundation.css.map */
