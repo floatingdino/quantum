@@ -195,34 +195,72 @@ a.button{
     }
   }
 }
+section.content{
+
+}
 .section-intro{
   float:left;
-  width:40%;
-  margin-right:60px;
+  width:100%;
+  box-sizing:border-box;
+  padding-bottom:60px;
+  @include breakpoint(1080px){
+    width:55%;
+    padding-right:15%;
+    padding-bottom:0;
+  }
+  h2{
+    font-style:italic;
+    font-size:60px;
+    margin:0 0 30px 0;
+  }
 }
 .team{
   width:$global-width;
+  max-width:100%;
   padding:0 10px;
-  margin:0 auto;
+  margin:100px auto;
+  h2{
+    margin-top:-30px;
+  }
   article{
-    width:220px;
-    height:327px;
+    width:50%;
+    padding-bottom:50%;
     overflow:hidden;
     position:relative;
     color:$white;
     float:left;
-    padding:0 5px;
+    margin-top:10px;
+    img{
+      width:100%;
+    }
+    &:hover{
+      z-index:1;
+    }
+    @include breakpoint(medium){
+      width:25%;
+      padding-bottom:33%;
+    }
+    @include breakpoint(1080px){
+      width:230px;
+      height:327px;
+      margin-top:-20px;
+      padding-bottom:0;
+      &:nth-of-type(7){
+        margin-left:160px;
+      }
+      &:nth-of-type(11){
+        margin-left:260px;
+      }
+    }
   }
   .team-container{
     overflow:hidden;
-    position:relative;
-  }
-  img{
-    width:220px;
+    position:absolute;
+    // background-color:$dark-gray;
+    top:0;right:5px;bottom:0;left:5px;
   }
   .overlay{
-    opacity:0;
-    background-color:rgba(19,60,114,0.85);
+    opacity:1;
     transition:opacity 0.3s;
     position:absolute;
     top:0;
@@ -235,20 +273,85 @@ a.button{
     &:hover{
       opacity:1;
     }
+    @include breakpoint(medium){
+      opacity:0;
+      background-color:rgba(19,60,114,0.85);
+    }
     h3{
       color:$orange;
-      margin:0;
-    }
-    h4{
+      font-size:40px;
+      font-style:italic;
+      position:absolute;
+      bottom:15px;
+      left:15px;
+      a{
+        color:inherit;
+      }
+      @include breakpoint(1080px){
+        margin:60px 0 0 0;
+      }
+      @include breakpoint(medium){
+        position:static;
+      }
 
+    }
+    p{
+      font-size:16px;
+      font-weight:600;
+      display:none;
+      @include breakpoint(medium){
+        display:inline-block;
+      }
+    }
+    ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:none;
+      @include breakpoint(800px){
+        display:inline-block;
+      }
+      li{
+        display:inline-block;
+        width:22px;
+        height:22px;
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:contain;
+        margin-right:18px;
+        &.email{
+          background-image:url(../images/mailwhite.svg);
+        }
+        &.linkedin{
+          background-image:url(../images/linkedinwhite.svg);
+        }
+      }
     }
     .button{
       background-color:$medium-gray;
-      font-size:15px;
+      font-size:12px;
       transition:background-color 0.2s;
+      position:absolute;
+      bottom:15px;
+      left:15px;
+      display:none;
+      @include breakpoint(medium){
+        display:inline-block;
+      }
+      @include breakpoint(large){
+        font-size:15px;
+      }
       &:hover{
         background-color:$orange;
       }
     }
+  }
+}
+a.whole-article{
+  position:absolute;
+  top:0;right:0;bottom:0;left:0;
+  z-index:1;
+  @include breakpoint(medium){
+    display:none;
   }
 }

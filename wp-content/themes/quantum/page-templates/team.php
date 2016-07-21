@@ -23,6 +23,7 @@ get_header(); ?>
   <section class="team">
     <div class="section-intro">
       <h2>Meet the Team</h2>
+      <p>Your relationship with us is what really matters at Quantum. Our team is an extension of your team and your business is our business. With great communication and help when you need it, the people at Quantum just make your life easier.</p>
     </div>
     <?php
     $args = array('post_type'=>'people','posts_per_page'=>-1);
@@ -32,17 +33,18 @@ get_header(); ?>
         <div class="team-container">
           <?php the_post_thumbnail();?>
           <div class="overlay">
+            <a class="whole-article" href="<?php the_permalink();?>"></a>
             <?php
             if(get_field('email') || get_field('linkedin')){
               ?>
               <ul>
-                <?php if(get_field('email'))
-                  echo '<a href="mailto:' . get_field('email') . '>"<li class="email"></li></a>';?>
                 <?php if(get_field('linkedin'))
-                  echo '<a href="' . get_field('linkedin') . '>"<li class="linkedin"></li></a>';?>
+                  echo '<a href="' . get_field('linkedin') . '"><li class="linkedin"></li></a>';?>
+                <?php if(get_field('email'))
+                  echo '<a href="mailto:' . get_field('email') . '"><li class="email"></li></a>';?>
               </ul>
               <h3><?php the_title(); ?></h3>
-              <h4><?php the_field('position');?></h4>
+              <p><?php the_field('position');?></p>
               <a class="button" href="<?php the_permalink();?>">View Profile</a>
             <?php } ?>
           </div>
