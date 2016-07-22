@@ -55,7 +55,7 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #ec5840,
 );
-$light-gray: #e2e2e2;
+$light-gray: #f4f4f4;
 $medium-gray: #9b9b9b;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
@@ -570,6 +570,8 @@ $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
 
 @mixin italic-header{
+  font-family:$header-font-family;
+  font-stretch:extra-condensed;
   font-weight:medium;
   font-style:italic;
   letter-spacing:-2px;

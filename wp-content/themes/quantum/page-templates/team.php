@@ -18,7 +18,29 @@ get_header(); ?>
     <?php the_content();?>
   </section>
   <section class="testimonies">
-
+    <div class="quotes"></div>
+    <div class="slider">
+      <ul>
+        <li>
+          <div class="slider-content">
+            <p>While other accounting firms wait for your once a year call at tax time, the team at Quantum are always on the blower. That’s because we really care about your success.</p>
+            <h3>Dan Arkoll (AFS Group)</h3>
+          </div>
+        </li>
+        <li>
+          <div class="slider-content">
+            <p>While other accounting firms wait for your once a year call at tax time, the team at Quantum are always on the blower. That’s because we really care about your success.</p>
+            <h3>Dan Arkoll (AFS Group)</h3>
+          </div>
+        </li>
+        <li>
+          <div class="slider-content">
+            <p>While other accounting firms wait for your once a year call at tax time, the team at Quantum are always on the blower. That’s because we really care about your success.</p>
+            <h3>Dan Arkoll (AFS Group)</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
   <section class="team">
     <div class="section-intro">
@@ -29,7 +51,7 @@ get_header(); ?>
     $args = array('post_type'=>'people','posts_per_page'=>-1);
     $loop = new WP_Query($args);
     while($loop->have_posts()) : $loop->the_post();?>
-      <article>
+      <article class="team-person">
         <div class="team-container">
           <?php the_post_thumbnail();?>
           <div class="overlay">
@@ -50,15 +72,67 @@ get_header(); ?>
           </div>
         </div>
       </article>
-    <?php endwhile;?>
+    <?php endwhile;
+    wp_reset_postdata();?>
     <div class="clear"></div>
   </section>
   <section class="careers">
+    <div class="section-intro">
+      <h2>Careers</h2>
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. </p>
+    </div>
+    <?php
+    $args = array('post_type'=>'careers','posts_per_page'=>-1);
+    $loop = new WP_Query($args);
+    while($loop->have_posts()) : $loop->the_post();?>
+    <article class="team-person">
+      <div class="team-container">
+        <h3><?php the_title();?></h3>
+        <p>Role Available</p>
+        <a class="button" href="<?php the_permalink();?>">View More</a>
+      </div>
+    </article>
+    <?php endwhile;
+    wp_reset_postdata(); ?>
+    <div class="clear"></div>
+  </section>
+  <section class="partners">
+    <div class="container">
+      <div class="section-intro">
+        <h2>Partnered for Success</h2>
+        <p>We’re proud to partner with the best in the industry to provide the expertise your business needs. Our depth of experience in business software systems means that we can work with you to streamline your operations.  </p>
+      </div>
+      <?php
+      if(have_rows('partner')):?>
+      <div class="partner-logos">
+        <?php while(have_rows('partner')):the_row();?>
 
+          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
+          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
+          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
+          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
+          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
+          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
+
+        <?php endwhile;?>
+      </div>
+      <?php endif;?>
+    </div>
+    <div class="clear"></div>
   </section>
 <?php endwhile; ?>
 <?php do_action( 'foundationpress_after_content' ); ?>
-
+<script>
+jQuery(document).ready(function($){
+  $('.slider').unslider({
+    autoplay:true,
+    speed:500,
+    delay:5000,
+    arrows:false,
+    animateHeight:true
+  });
+});
+</script>
 </main>
 
 <?php get_footer();

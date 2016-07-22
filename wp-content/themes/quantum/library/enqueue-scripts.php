@@ -44,5 +44,13 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 	add_action('wp_enqueue_scripts', 'brick');
 
+function unslider(){
+	if(is_page_template('page-templates/team.php')){
+		wp_enqueue_script('unslider', get_template_directory_uri() . '/assets/javascript/custom/unslider/unslider-min.js', array('jquery'), '2.0.5', true);
+		wp_enqueue_style('unslider-css', get_template_directory_uri() . '/assets/javascript/custom/unslider/unslider.css');
+		wp_enqueue_style('unslider-dots-css', get_template_directory_uri() . '/assets/javascript/custom/unslider/unslider-dots.css');
+	}
+}
+add_action('wp_enqueue_scripts','unslider');
 	include("custom-post-types.php");
 endif;

@@ -175,10 +175,14 @@ div.phone{
   }
 
   div.phone{
-    color:$orange;
-    font-size:48px;
     @include italic-header();
+    font-weight:800;
+    color:$orange;
+    font-size:55px;
     text-align:right;
     line-height:70px;
   }
+}
+.menu .active a{
+  background-color:transparent !important;
 }
