@@ -34,7 +34,7 @@ get_header(); ?>
     </div>
   </section>
   <?php endif; ?>
-  <section class="team">
+  <section class="team" id="team">
     <div class="section-intro">
       <h2>Meet the Team</h2>
       <p>Your relationship with us is what really matters at Quantum. Our team is an extension of your team and your business is our business. With great communication and help when you need it, the people at Quantum just make your life easier.</p>

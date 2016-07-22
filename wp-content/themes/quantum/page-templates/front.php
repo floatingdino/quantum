@@ -18,11 +18,12 @@ get_header(); ?>
 		<section class="top-blocks">
 			<?php while(have_rows('blocks')):the_row();?>
 				<article class="block">
-					<div style="background-image:url(<?php the_sub_field('background_image');?>)">
+					<div class="container" style="background-image:url(<?php the_sub_field('background_image');?>)">
 						<a href="<?php the_sub_field('link'); ?>">
 						<h2><?php the_sub_field('tag');?></h2>
 						<h3><?php the_sub_field('title');?> <i class="triangle"></i></h3>
 						</a>
+            <div class="orange-overlay"></div>
 					</div>
 				</article>
 			<?php endwhile;?>
@@ -52,6 +53,7 @@ get_header(); ?>
 				</article>
 			<?php wp_reset_postdata();endwhile;?>
 			<div class="clear"></div>
+      <a class="button" href="team#team">View All</a>
 	</section>
 	<?php endif;?>
 

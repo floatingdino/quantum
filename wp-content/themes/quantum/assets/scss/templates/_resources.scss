@@ -1,6 +1,31 @@
 body.blog{
   background-color:$light-gray;
 }
+.blog section.container, section.resources{
+  position:relative;
+  z-index:-1;
+  &:before, &:after{
+    content:'';
+    position:absolute;
+    background-size:contain;
+    background-repeat:no-repeat;
+    z-index:-1;
+  }
+  &:before{
+    top:20px;
+    left:20px;
+    background-image:url(../images/top_left_colour_geo.svg);
+    width:317px;
+    height:313px;
+  }
+  &:after{
+    bottom:20px;
+    right:20px;
+    background-image:url(../images/bottom_right_white_geo.svg);
+    width:329px;
+    height:317px;
+  }
+}
 .page-resources, section.resources{
   h1{
     text-align:center;
