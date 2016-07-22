@@ -2564,7 +2564,7 @@ div.title-bar-title a {
   margin-right: 40px;
   vertical-align: bottom; }
 
-.page-template-team #footer-container, .page-template-services #footer-container {
+.page-template-team #footer-container, .page-template-services #footer-container, .page-template-front #footer-container {
   margin-top: 0; }
 
 .legal {
@@ -3257,7 +3257,7 @@ form#subscribe {
 body.blog {
   background-color: #f4f4f4; }
 
-.page-resources h1 {
+.page-resources h1, section.resources h1 {
   text-align: center;
   font-size: 3.125rem;
   font-family: "acumin-pro-extra-condensed", "acumin-pro", Roboto, Arial, sans-serif;
@@ -3267,93 +3267,93 @@ body.blog {
   letter-spacing: -2px;
   margin: 60px 0 0 0; }
 
-.page-resources ul.filters {
+.page-resources ul.filters, section.resources ul.filters {
   list-style: none;
   margin: 35px 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 1rem; }
-  .page-resources ul.filters li {
+  .page-resources ul.filters li, section.resources ul.filters li {
     display: inline-block;
     padding: 0 10px; }
-    .page-resources ul.filters li:not(:last-child) {
+    .page-resources ul.filters li:not(:last-child), section.resources ul.filters li:not(:last-child) {
       border-right: 1px solid #9b9b9b; }
-    .page-resources ul.filters li.highlight {
+    .page-resources ul.filters li.highlight, section.resources ul.filters li.highlight {
       color: #fe5205; }
 
-.page-resources section#articles {
+.page-resources section#articles, section.resources section#articles {
   max-width: 70rem;
   margin-left: auto;
   margin-right: auto; }
-  .page-resources section#articles::before, .page-resources section#articles::after {
+  .page-resources section#articles::before, .page-resources section#articles::after, section.resources section#articles::before, section.resources section#articles::after {
     content: ' ';
     display: table; }
-  .page-resources section#articles::after {
+  .page-resources section#articles::after, section.resources section#articles::after {
     clear: both; }
 
-.page-resources article {
+.page-resources article, section.resources article {
   margin-bottom: 20px;
   width: 100%;
   float: left;
   padding-left: 0.625rem;
   padding-right: 0.625rem; }
   @media screen and (min-width: 40em) {
-    .page-resources article {
+    .page-resources article, section.resources article {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
-  .page-resources article:last-child:not(:first-child) {
+  .page-resources article:last-child:not(:first-child), section.resources article:last-child:not(:first-child) {
     float: right; }
   @media screen and (min-width: 40em) {
-    .page-resources article {
+    .page-resources article, section.resources article {
       width: 50%;
       float: left;
       padding-left: 0.625rem;
       padding-right: 0.625rem;
       margin-bottom: 30px; } }
   @media screen and (min-width: 40em) and (min-width: 40em) {
-    .page-resources article {
+    .page-resources article, section.resources article {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
   @media screen and (min-width: 40em) {
-      .page-resources article:last-child:not(:first-child) {
+      .page-resources article:last-child:not(:first-child), section.resources article:last-child:not(:first-child) {
         float: right; } }
   @media screen and (min-width: 64em) {
-    .page-resources article {
+    .page-resources article, section.resources article {
       width: 25%;
       float: left;
       padding-left: 0.625rem;
       padding-right: 0.625rem; } }
   @media screen and (min-width: 64em) and (min-width: 40em) {
-    .page-resources article {
+    .page-resources article, section.resources article {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
   @media screen and (min-width: 64em) {
-      .page-resources article:last-child:not(:first-child) {
+      .page-resources article:last-child:not(:first-child), section.resources article:last-child:not(:first-child) {
         float: right; } }
-  .page-resources article .wp-post-image {
+  .page-resources article .wp-post-image, section.resources article .wp-post-image {
     width: 100%;
     height: auto; }
-  .page-resources article div.content {
+  .page-resources article div.content, section.resources article div.content {
     padding: 0 20px 20px 20px; }
-  .page-resources article h2 {
+  .page-resources article h2, section.resources article h2 {
     font-size: 26px;
     margin: 0 0 15px 0; }
-  .page-resources article p.article-details {
+  .page-resources article p.article-details, section.resources article p.article-details {
     display: inline-block;
     font-size: 12px;
     margin: 20px 0; }
-  .page-resources article div.article-body {
+  .page-resources article div.article-body, section.resources article div.article-body {
     background-color: #a6a6a6;
     color: #fff; }
-  .page-resources article.whitepapers div.article-body {
+  .page-resources article.whitepapers div.article-body, section.resources article.whitepapers div.article-body {
     background-color: #143c6e; }
-  .page-resources article.resources div.article-body {
+  .page-resources article.resources div.article-body, section.resources article.resources div.article-body {
     background-color: #fff;
     color: #143c6e; }
-  .page-resources article.highlight div.article-body, .page-resources article.events div.article-body {
+  .page-resources article.highlight div.article-body, .page-resources article.events div.article-body, section.resources article.highlight div.article-body, section.resources article.events div.article-body {
     background-color: #fe5205; }
 
-.page-resources .pagination {
+.page-resources .pagination, section.resources .pagination {
   display: none; }
 
 .visible {
@@ -3361,7 +3361,7 @@ body.blog {
   transition: opacity 0.4s;
   opacity: 1; }
 
-div.brick-more {
+div.brick-more, section.resources a.button {
   display: block;
   padding: 0 30px;
   line-height: 45px;
@@ -3369,12 +3369,16 @@ div.brick-more {
   color: #fff;
   text-align: center;
   margin: 80px auto 20px auto;
-  width: 150px;
+  width: 200px;
   clear: both;
-  cursor: pointer; }
-  div.brick-more.finished {
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
+  div.brick-more.finished, section.resources a.button.finished {
     cursor: default;
     background-color: #8a8a8a; }
+  div.brick-more:hover, section.resources a.button:hover {
+    background-color: #fe5205; }
 
 .clear {
   clear: both; }
@@ -3389,7 +3393,7 @@ div.brick-more {
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
-  background-position: right top; }
+  background-position: left top; }
   .top-hero:before {
     width: 100%;
     height: 100%;
@@ -3402,7 +3406,7 @@ div.brick-more {
 .header-content {
   width: 70rem;
   max-width: 100%;
-  padding-top: 230px;
+  padding: 230px 10px 40px 10px;
   z-index: 1;
   margin: 0 auto; }
   .header-content h1 {
@@ -3437,26 +3441,45 @@ i.triangle:before {
 .page-template-front section.top-blocks {
   position: relative;
   width: 1200px;
+  max-width: 100%;
   margin: -20px auto 0 auto; }
   .page-template-front section.top-blocks i.triangle:before {
     color: #fe5205;
     font-size: 25px; }
   .page-template-front section.top-blocks .block {
-    width: 33.33333%;
+    width: 100%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     position: relative;
-    margin-top: -20px; }
+    margin-top: -20px;
+    padding-bottom: 40px; }
     @media screen and (min-width: 40em) {
       .page-template-front section.top-blocks .block {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem; } }
     .page-template-front section.top-blocks .block:last-child:not(:first-child) {
       float: right; }
+    .page-template-front section.top-blocks .block:nth-of-type(3) {
+      padding-bottom: 0; }
+    @media screen and (min-width: 40em) {
+      .page-template-front section.top-blocks .block {
+        width: 33.33333%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
+    .page-template-front section.top-blocks .block {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 40em) {
+        .page-template-front section.top-blocks .block:last-child:not(:first-child) {
+          float: right; } }
     .page-template-front section.top-blocks .block div {
       background-color: #143c6e;
-      padding: 30px; }
+      padding: 30px;
+      -webkit-background-size: cover;
+              background-size: cover; }
       .page-template-front section.top-blocks .block div h2, .page-template-front section.top-blocks .block div h3 {
         font-style: italic;
         line-height: 1; }
@@ -3497,22 +3520,41 @@ i.triangle:before {
   .page-template-front section.featured-team .headshot {
     overflow: hidden;
     width: 180px;
-    height: 180px;
+    max-width: 100%;
+    padding-top: 100%;
     border-radius: 50%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center top; }
+    @media screen and (min-width: 55.3125em) {
+      .page-template-front section.featured-team .headshot {
+        padding-top: 180px; } }
   .page-template-front section.featured-team article {
     width: 25%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     text-align: center;
-    margin: 20px 0; }
+    margin: 40px 0; }
     @media screen and (min-width: 40em) {
       .page-template-front section.featured-team article {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem; } }
     .page-template-front section.featured-team article:last-child:not(:first-child) {
       float: right; }
+
+section.resources {
+  background-color: #f4f4f4;
+  padding: 20px 0; }
+  section.resources .container {
+    width: 70rem;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px; }
+  section.resources h1 {
+    font-size: 75px;
+    margin: 0  0 30px 0; }
 
 .section-links {
   background-color: #143c6e;

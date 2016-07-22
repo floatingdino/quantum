@@ -1,7 +1,7 @@
 body.blog{
   background-color:$light-gray;
 }
-.page-resources{
+.page-resources, section.resources{
   h1{
     text-align:center;
     font-size:rem-calc(50);
@@ -78,7 +78,7 @@ body.blog{
   transition:opacity 0.4s;
   opacity:1;
 }
-div.brick-more{
+div.brick-more, section.resources a.button{
   display:block;
   padding:0 30px;
   line-height:45px;
@@ -86,11 +86,15 @@ div.brick-more{
   color:$white;
   text-align:center;
   margin:80px auto 20px auto;
-  width:150px;
+  width:200px;
   clear:both;
   cursor:pointer;
+  transition:background-color 0.2s;
   &.finished{
     cursor:default;
     background-color:$dark-gray;
+  }
+  &:hover{
+    background-color:$orange;
   }
 }
