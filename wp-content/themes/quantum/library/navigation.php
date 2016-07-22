@@ -13,6 +13,7 @@ register_nav_menus(array(
 	'footer-nav' => 'Footer Menu',
 	'social-top' => 'Social Media Top Menu',
 	'social-footer' => 'Social Media Footer Menu',
+	'legal' => 'Legal Menu',
 ));
 
 

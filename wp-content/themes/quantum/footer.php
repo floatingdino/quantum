@@ -17,9 +17,13 @@
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
 				<div class="footer-links">
 					<?php wp_nav_menu(array('container_class'=>'menu-footer', 'theme_location'=>'footer-nav'));?>
-					<!-- <div class="phone">1300 123 456</div> -->
 					<?php wp_nav_menu(array('container_class'=>'social-menu', 'theme_location'=>'social-footer'));?>
 					<!-- TODO: LEGAL/ATTRIBUTION MENU -->
+				</div>
+				<div class="legal">
+					<?php wp_nav_menu(array('container_class'=>'legal-menu','theme_location'=>'legal'));?>
+					<a class="ply" href="http://madewithply.com">Ply Creative</a>
+					<div class="clear"></div>
 				</div>
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
@@ -35,6 +39,11 @@
 
 
 <?php wp_footer(); ?>
+<script>
+$("button.menu-icon").click(function(){
+  $("#mobile-menu").toggle();
+});
+</script>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 </body>
 </html>

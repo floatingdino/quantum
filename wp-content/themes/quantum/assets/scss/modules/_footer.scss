@@ -79,3 +79,36 @@
 	margin-right:40px;
 	vertical-align:bottom;
 }
+.page-template-team, .page-template-services{
+	#footer-container{
+		margin-top:0;
+	}
+}
+.legal{
+	margin:50px 0 20px 0;
+	font-size:13px;
+	.legal-menu{
+		float:left;
+		opacity:0.5;
+		li a{
+			position:relative;
+		}
+		li:not(:last-child) a:after{
+			content:'\2022';
+			display:inline-block;
+			position:absolute;
+			right:0;
+		}
+	}
+}
+.ply{
+	background-image:url(../images/ply.svg);
+	height:30px;
+	width:140px;
+	background-repeat:no-repeat;
+	background-size:contain;
+	float:right;
+	margin-right:10px;
+	display:block;
+	color:transparent !important;
+}

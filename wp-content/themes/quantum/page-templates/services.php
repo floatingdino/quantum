@@ -39,68 +39,70 @@ get_header(); ?>
       <h1><?php the_field('ta_header');?></h1>
       <h2>Tax &amp; Accounting <i class="triangle"></i></h2>
     </div>
+    <?php if(have_rows('ta_sub')):?>
     <div class="block-container">
-
+      <?php while(have_rows('ta_sub')):the_row()?>
+        <div class="subservice">
+          <h2><?php the_sub_field('ss_title'); ?></h2>
+          <p><?php the_sub_field('ss_content'); ?></p>
+        </div>
+      <?php endwhile;?>
+      <div class="clear"></div>
     </div>
+    <?php endif;?>
     <div class="bottom-details">
       <div class="person-container">
         <div class="blurb">
           <?php the_field('ta_details');?>
         </div>
         <div class="person-details">
+          <?php $post_object = get_field('ta_person');
+          if($post_object):
+            $post = $post_object;
+            setup_postdata($post);?>
           <div class="name">
-            <img class="headshot" src="<?php the_field('ta_image');?>">
-            <h3><?php the_field('ta_name');?></h3>
-            <p><?php the_field('ta_position');?></p>
+
+                <img class="headshot" src="<?php the_post_thumbnail_url('thumbnail');?>">
+                <h3><?php the_title();?></h3>
+                <p><?php the_field('position');?></p>
           </div>
           <div class="contact">
-            <?php the_field('ta_contact');?>
+            <ul>
+              <?php if(get_field('email'));echo '<li class="email">' . get_field('email') . '</li>';?>
+              <?php if(get_field('mobile'));echo '<li class="mobile">' . get_field('mobile') . '</li>';?>
+              <?php if(get_field('landline'));echo '<li class="landline">' . get_field('landline') . '</li>';?>
+
+            </ul>
           </div>
+          <?php wp_reset_postdata(); endif;?>
         </div>
         <div class="clear"></div>
       </div>
-      <div class="related-posts">
-        <?php $post_object =  get_field('ta_related_1');
-        if($post_object):
-          $post = $post_object;
-          setup_postdata($post);
+      <?php if(have_rows('sa_related')): ?>
+        <div class="related-posts">
+        <?php while(have_rows('sa_related')):the_row() ?>
+          <?php $post_object =  get_sub_field('related_post');
+            $post = $post_object;
+            setup_postdata($post);
 
-        ?>
-          <a href="<?php the_permalink();?>">
-          <article>
-            <div class="article-body">
-            <?php if(has_post_thumbnail())
-            the_post_thumbnail();?>
-            <div>
-              <p class="article-details"><?php echo get_the_category()[0]->name;?> / <?php echo get_the_date(get_option('date_format'));?></p>
-            </div>
-            <h3><?php the_title();?></h3>
-            <div class="clear"></div>
-            </div>
-          </article></a>
-          <?php wp_reset_postdata();
-        endif;?>
+          ?>
+            <a href="<?php the_permalink();?>">
+            <article>
+              <div class="article-body">
+              <?php if(has_post_thumbnail());
+              the_post_thumbnail();?>
+              <div>
+                <p class="article-details"><?php echo get_the_category()[0]->name;?> / <?php echo get_the_date(get_option('date_format'));?></p>
+              </div>
+              <h3><?php the_title();?></h3>
+              <div class="clear"></div>
+              </div>
+            </article></a>
+            <?php wp_reset_postdata();?>
 
-        <?php $post_object =  get_field('ta_related_2');
-        if($post_object):
-          $post = $post_object;
-          setup_postdata($post);
-
-        ?>
-          <a href="<?php the_permalink();?>">
-          <article>
-            <div class="article-body">
-            <?php if(has_post_thumbnail())
-            the_post_thumbnail();?>
-            <div>
-              <p class="article-details"><?php echo get_the_category()[0]->name;?> / <?php echo get_the_date(get_option('date_format'));?></p>
-            </div>
-            <h3><?php the_title();?></h3>
-            </div>
-          </article></a>
-          <?php wp_reset_postdata();
-        endif;?>
-      </div>
+        <?php endwhile; ?>
+        </div>
+      <?php endif; ?>
     </div>
   </section>
   <section id="business">
@@ -117,62 +119,57 @@ get_header(); ?>
           <?php the_field('bi_details');?>
         </div>
         <div class="person-details">
+          <?php $post_object = get_field('bi_person');
+          if($post_object):
+            $post = $post_object;
+            setup_postdata($post);?>
           <div class="name">
-            <img class="headshot" src="<?php the_field('bi_image');?>">
-            <h3><?php the_field('bi_name');?></h3>
-            <p><?php the_field('bi_position');?></p>
+
+                <img class="headshot" src="<?php the_post_thumbnail_url('thumbnail');?>">
+                <h3><?php the_title();?></h3>
+                <p><?php the_field('position');?></p>
           </div>
           <div class="contact">
-            <?php the_field('bi_contact');?>
+            <ul>
+              <?php if(get_field('email'));echo '<li class="email">' . get_field('email') . '</li>';?>
+              <?php if(get_field('mobile'));echo '<li class="mobile">' . get_field('mobile') . '</li>';?>
+              <?php if(get_field('landline'));echo '<li class="landline">' . get_field('landline') . '</li>';?>
+
+            </ul>
           </div>
+          <?php wp_reset_postdata(); endif;?>
         </div>
         <div class="clear"></div>
       </div>
-      <div class="related-posts">
-        <?php $post_object =  get_field('bi_related_1');
-        if($post_object):
-          $post = $post_object;
-          setup_postdata($post);
+      <?php if(have_rows('bi_related')): ?>
+        <div class="related-posts">
+        <?php while(have_rows('bi_related')):the_row() ?>
+          <?php $post_object =  get_sub_field('related_post');
+            $post = $post_object;
+            setup_postdata($post);
 
-        ?>
-          <a href="<?php the_permalink();?>">
-          <article>
-            <div class="article-body">
-            <?php if(has_post_thumbnail())
-            the_post_thumbnail();?>
-            <div>
-              <p class="article-details"><?php echo get_the_category()[0]->name;?> / <?php echo get_the_date(get_option('date_format'));?></p>
-            </div>
-            <h3><?php the_title();?></h3>
-            <div class="clear"></div>
-            </div>
-          </article></a>
-          <?php wp_reset_postdata();
-        endif;?>
+          ?>
+            <a href="<?php the_permalink();?>">
+            <article>
+              <div class="article-body">
+              <?php if(has_post_thumbnail());
+              the_post_thumbnail();?>
+              <div>
+                <p class="article-details"><?php echo get_the_category()[0]->name;?> / <?php echo get_the_date(get_option('date_format'));?></p>
+              </div>
+              <h3><?php the_title();?></h3>
+              <div class="clear"></div>
+              </div>
+            </article></a>
+            <?php wp_reset_postdata();?>
 
-        <?php $post_object =  get_field('bi_related_2');
-        if($post_object):
-          $post = $post_object;
-          setup_postdata($post);
+        <?php endwhile; ?>
+        </div>
+      <?php endif; ?>
 
-        ?>
-          <a href="<?php the_permalink();?>">
-          <article>
-            <div class="article-body">
-            <?php if(has_post_thumbnail())
-            the_post_thumbnail();?>
-            <div>
-              <p class="article-details"><?php echo get_the_category()[0]->name;?> / <?php echo get_the_date(get_option('date_format'));?></p>
-            </div>
-            <h3><?php the_title();?></h3>
-            </div>
-          </article></a>
-          <?php wp_reset_postdata();
-        endif;?>
-      </div>
     </div>
   </section>
-  <section id="business">
+  <section id="specialist">
     <div class="section-header" style="background-image:url(<?php the_field('sa_head_image');?>)">
       <h1><?php the_field('sa_header');?></h1>
       <h2>Specialist Advisory <i class="triangle"></i></h2>
@@ -186,59 +183,53 @@ get_header(); ?>
           <?php the_field('sa_details');?>
         </div>
         <div class="person-details">
+          <?php $post_object = get_field('sa_person');
+          if($post_object):
+            $post = $post_object;
+            setup_postdata($post);?>
           <div class="name">
-            <img class="headshot" src="<?php the_field('sa_image');?>">
-            <h3><?php the_field('sa_name');?></h3>
-            <p><?php the_field('sa_position');?></p>
+
+                <img class="headshot" src="<?php the_post_thumbnail_url('thumbnail');?>">
+                <h3><?php the_title();?></h3>
+                <p><?php the_field('position');?></p>
           </div>
           <div class="contact">
-            <?php the_field('sa_contact');?>
+            <ul>
+              <?php if(get_field('email'));echo '<li class="email">' . get_field('email') . '</li>';?>
+              <?php if(get_field('mobile'));echo '<li class="mobile">' . get_field('mobile') . '</li>';?>
+              <?php if(get_field('landline'));echo '<li class="landline">' . get_field('landline') . '</li>';?>
+
+            </ul>
           </div>
+          <?php wp_reset_postdata(); endif;?>
         </div>
         <div class="clear"></div>
       </div>
-      <div class="related-posts">
-        <?php $post_object =  get_field('sa_related_1');
-        if($post_object):
-          $post = $post_object;
-          setup_postdata($post);
+      <?php if(have_rows('sa_related')): ?>
+        <div class="related-posts">
+        <?php while(have_rows('sa_related')):the_row() ?>
+          <?php $post_object =  get_sub_field('related_post');
+            $post = $post_object;
+            setup_postdata($post);
 
-        ?>
-          <a href="<?php the_permalink();?>">
-          <article>
-            <div class="article-body">
-            <?php if(has_post_thumbnail())
-            the_post_thumbnail();?>
-            <div>
-              <p class="article-details"><?php echo get_the_category()[0]->name;?> / <?php echo get_the_date(get_option('date_format'));?></p>
-            </div>
-            <h3><?php the_title();?></h3>
-            <div class="clear"></div>
-            </div>
-          </article></a>
-          <?php wp_reset_postdata();
-        endif;?>
+          ?>
+            <a href="<?php the_permalink();?>">
+            <article>
+              <div class="article-body">
+              <?php if(has_post_thumbnail());
+              the_post_thumbnail();?>
+              <div>
+                <p class="article-details"><?php echo get_the_category()[0]->name;?> / <?php echo get_the_date(get_option('date_format'));?></p>
+              </div>
+              <h3><?php the_title();?></h3>
+              <div class="clear"></div>
+              </div>
+            </article></a>
+            <?php wp_reset_postdata();?>
 
-        <?php $post_object =  get_field('sa_related_2');
-        if($post_object):
-          $post = $post_object;
-          setup_postdata($post);
-
-        ?>
-          <a href="<?php the_permalink();?>">
-          <article>
-            <div class="article-body">
-            <?php if(has_post_thumbnail())
-            the_post_thumbnail();?>
-            <div>
-              <p class="article-details"><?php echo get_the_category()[0]->name;?> / <?php echo get_the_date(get_option('date_format'));?></p>
-            </div>
-            <h3><?php the_title();?></h3>
-            </div>
-          </article></a>
-          <?php wp_reset_postdata();
-        endif;?>
-      </div>
+        <?php endwhile; ?>
+        </div>
+      <?php endif; ?>
     </div>
   </section>
 <?php endwhile;?>

@@ -17,31 +17,23 @@ get_header(); ?>
   <section class="content">
     <?php the_content();?>
   </section>
+  <?php if(have_rows('testimony')): ?>
   <section class="testimonies">
     <div class="quotes"></div>
     <div class="slider">
       <ul>
+        <?php while(have_rows('testimony')):the_row(); ?>
         <li>
           <div class="slider-content">
-            <p>While other accounting firms wait for your once a year call at tax time, the team at Quantum are always on the blower. That’s because we really care about your success.</p>
-            <h3>Dan Arkoll (AFS Group)</h3>
+            <?php the_sub_field('quote');?>
+            <h3><?php the_sub_field('person')?></h3>
           </div>
         </li>
-        <li>
-          <div class="slider-content">
-            <p>While other accounting firms wait for your once a year call at tax time, the team at Quantum are always on the blower. That’s because we really care about your success.</p>
-            <h3>Dan Arkoll (AFS Group)</h3>
-          </div>
-        </li>
-        <li>
-          <div class="slider-content">
-            <p>While other accounting firms wait for your once a year call at tax time, the team at Quantum are always on the blower. That’s because we really care about your success.</p>
-            <h3>Dan Arkoll (AFS Group)</h3>
-          </div>
-        </li>
+        <?php endwhile; ?>
       </ul>
     </div>
   </section>
+  <?php endif; ?>
   <section class="team">
     <div class="section-intro">
       <h2>Meet the Team</h2>
@@ -106,19 +98,12 @@ get_header(); ?>
       if(have_rows('partner')):?>
       <div class="partner-logos">
         <?php while(have_rows('partner')):the_row();?>
-
           <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
-          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
-          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
-          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
-          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
-          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
-
         <?php endwhile;?>
       </div>
+      <div class="clear"></div>
       <?php endif;?>
     </div>
-    <div class="clear"></div>
   </section>
 <?php endwhile; ?>
 <?php do_action( 'foundationpress_after_content' ); ?>

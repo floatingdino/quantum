@@ -47,8 +47,9 @@ header#masthead{
     padding-top: 0;
     padding-bottom: 0;
     font-weight: bold;
-    font-size: 18px ;
+    font-size: 20px ;
     vertical-align:middle;
+    font-family:$header-font-family;
     &:hover:not(.button) {
       background-color: transparent;
     }
@@ -141,8 +142,12 @@ header#masthead{
       padding-left:0;
     }
     .home a{
+      display:none;
       background-image:url('../images/quantum_light.svg');
       color:transparent !important;
+      @include breakpoint(medium){
+        display:block;
+      }
     }
   }
 }
@@ -185,4 +190,19 @@ div.phone{
 }
 .menu .active a{
   background-color:transparent !important;
+}
+#mobile-menu{
+  display:none;
+  background-color:$white;
+}
+div.title-bar-title a{
+  color:transparent;
+  background-image:url(../images/quantum.svg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:left center;
+  height:40px;
+  width:170px;
+  display:block;
+  margin-left:5px;
 }
