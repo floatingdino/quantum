@@ -68,15 +68,16 @@ get_header(); ?>
     wp_reset_postdata();?>
     <div class="clear"></div>
   </section>
+  <?php
+  $args = array('post_type'=>'careers','posts_per_page'=>-1);
+  $loop = new WP_Query($args);
+  if($loop->have_posts()):?>
   <section class="careers">
     <div class="section-intro">
       <h2>Careers</h2>
       <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. </p>
     </div>
-    <?php
-    $args = array('post_type'=>'careers','posts_per_page'=>-1);
-    $loop = new WP_Query($args);
-    while($loop->have_posts()) : $loop->the_post();?>
+    <?php while($loop->have_posts()) : $loop->the_post();?>
     <article class="team-person">
       <div class="team-container">
         <h3><?php the_title();?></h3>
@@ -88,6 +89,7 @@ get_header(); ?>
     wp_reset_postdata(); ?>
     <div class="clear"></div>
   </section>
+  <?php endif; ?>
   <section class="partners">
     <div class="container">
       <div class="section-intro">
