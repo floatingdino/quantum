@@ -3558,7 +3558,6 @@ i.triangle:before {
     font-size: 24px;
     margin-top: 10px; }
   .page-template-front section.featured-team .headshot {
-    overflow: hidden;
     width: 180px;
     max-width: 100%;
     padding-top: 100%;
@@ -3566,10 +3565,33 @@ i.triangle:before {
     margin: 0 auto;
     -webkit-background-size: cover;
             background-size: cover;
-    background-position: center top; }
+    background-position: center top;
+    position: relative; }
     @media screen and (min-width: 55.3125em) {
       .page-template-front section.featured-team .headshot {
         padding-top: 180px; } }
+    .page-template-front section.featured-team .headshot:after {
+      content: "";
+      position: absolute;
+      left: -4px;
+      bottom: -4px;
+      background-image: url(../images/bottom_triangle.svg);
+      height: 55px;
+      width: 49px;
+      -webkit-background-size: contain;
+              background-size: contain;
+      -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+              transform: scale(0);
+      -webkit-transition: -webkit-transform 110ms ease;
+      transition: -webkit-transform 110ms ease;
+      transition: transform 110ms ease;
+      transition: transform 110ms ease, -webkit-transform 110ms ease;
+      z-index: 1; }
+    .page-template-front section.featured-team .headshot:hover:after {
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1); }
   .page-template-front section.featured-team article {
     width: 25%;
     float: left;

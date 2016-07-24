@@ -145,7 +145,7 @@ i.triangle{
       margin-top:10px;
     }
     .headshot{
-      overflow:hidden;
+      // overflow:hidden;
       width:180px;
       max-width:100%;
       padding-top:100%;
@@ -153,8 +153,28 @@ i.triangle{
       margin:0 auto;
       background-size:cover;
       background-position:center top;
+      position:relative;
       @include breakpoint(885px){
         padding-top:180px;
+      }
+      &:after{
+        content:"";
+        position:absolute;
+        left:-4px;
+        bottom:-4px;
+        background-image:url(../images/bottom_triangle.svg);
+        height:55px;
+        width:49px;
+        background-size:contain;
+        // opacity:0;
+        transform:scale(0);
+        // transition:opacity 0.2s;
+        transition:transform 110ms ease;
+        z-index:1;
+      }
+      &:hover:after{
+        // opacity:1;
+        transform:scale(1);
       }
     }
     article{
