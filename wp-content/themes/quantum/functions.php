@@ -57,6 +57,23 @@ function new_excerpt_more(){
   remove_filter('excerpt_more', 'new_excerpt_more');
   return '&#8230;';
 }
+
 add_filter('excerpt_more', 'new_excerpt_more', 999);
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
+
+// Call Googles HTML5 Shim, but only for users on old versions of IE
+function wpfme_IEhtml5_shim () {
+	global $is_IE;
+	if ($is_IE)
+	echo '<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->';
+}
+add_action('wp_head', 'wpfme_IEhtml5_shim');
+
+// Remove the version number of WP
+// Warning - this info is also available in the readme.html file in your root directory - delete this file!
+remove_action('wp_head', 'wp_generator');
+
+// Obscure login screen error messages
+function wpfme_login_obscure(){ return '<strong>Sorry</strong>: Think you have gone wrong somwhere!';}
+add_filter( 'login_errors', 'wpfme_login_obscure' );
