@@ -56,7 +56,6 @@ get_header(); ?>
       <a class="button" href="team#team">View All</a>
 	</section>
 	<?php endif;?>
-
 	<section class="resources">
 		<h1>Resources</h1>
 		<div class="container">
