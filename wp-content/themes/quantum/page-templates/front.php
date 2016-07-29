@@ -46,15 +46,16 @@ get_header(); ?>
 				setup_postdata($post);
 				?>
 				<article class="person">
-					<a href="<?php the_permalink(); ?>">
+					<a class="loader" data-modal="<?php the_id();?>" href="<?php echo untrailingslashit(get_permalink());?>">
 					<div class="headshot" style="background-image:url(<?php the_post_thumbnail_url('medium');?>)">
 						<?php //the_post_thumbnail(); ?>
 					</div>
 					<h4><?php the_title(); ?></h4>
 					</a>
 				</article>
-			<?php wp_reset_postdata();endwhile;?>
+			<?php endwhile;wp_reset_postdata();?>
 			<div class="clear"></div>
+
       <a class="button" href="team#team">View All</a>
 	</section>
 	<?php endif;?>
@@ -88,5 +89,23 @@ get_header(); ?>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 </main>
-
+<article id="person-modal" class="reveal full" data-reveal>
+  <button id="closebtn">&#215;</button>
+  <span id="puthere"></span>
+</article>
+<script>
+modal = $('#person-modal');
+$('a.loader').click(function(){
+  // modal = $('#' + $(this).attr("data-modal"));
+  modal = $('#person-modal');
+  modalcontainer = $('#puthere');
+  $(modalcontainer).load($(this).attr("href") + " #person-content", function(){
+    $(modal).fadeIn(200);
+  });
+  return false;
+});
+$('#closebtn').click(function(){
+  $(modal).fadeOut(200);
+})
+</script>
 <?php get_footer();

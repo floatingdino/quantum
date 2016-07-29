@@ -801,16 +801,68 @@ a.whole-article{
     padding-right:10px;
   }
 }
-article.person{
-  width:990px;
+#closebtn{
+  position:absolute;
+  top:50px;
+  right:50px;
+  height:50px;
+  width:50px;
+  display:block;
+  border:10px solid $orange;
+  border-radius:50%;
+  z-index:1;
+  text-align:center;
+  line-height:30px;
+  font-size:30px;
+}
+.single-people #close-modal{
+  display:none;
+}
+article.person-single{
+  width:1390px;
   max-width:100%;
-  margin:100px auto;
+  margin:0 auto;
+  // box-sizing:content-box;
+  position:relative;
+  padding:200px 0;
+  @include breakpoint(large){
+    padding:200px;
+  }
+  &:before, &:after{
+      content:'';
+      background-size:contain;
+      background-repeat:no-repeat;
+      z-index:-1;
+      position:absolute;
+  }
+  &:before{
+    background-image:url(../images/person_top_geo.svg);
+    width:491px;
+    height:188px;
+    top:0;
+    left:0;
+    @include breakpoint(large){
+      left:200px;
+    }
+  }
+  &:after{
+    background-image:url(../images/person_bottom_geo.svg);
+    width:272px;
+    height:118px;
+    bottom:100px;
+    right:0;
+    @include breakpoint(large){
+      right:190px;
+
+    }
+  }
   h1{
     color:$orange;
     line-height:0.8;
     font-size:70px;
   }
   h2{
+    font-size:40px;
     margin-top:50px;
   }
   h3{
@@ -832,10 +884,36 @@ article.person{
     display:inline-block;
     float:none;
     vertical-align: top;
-    width:30%;
+    width:100%;
+    @include breakpoint(medium){
+      width:30%;
+    }
   }
   div.right{
     display:inline-block;
-    width:69%;
+    width:100%;
+    padding:0 10px;
+    @include breakpoint(medium){
+        width:65%;
+    }
   }
+  .email, .linkedin{
+    height:20px;
+    width:25px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    display:inline-block;
+    margin:0 15px;
+  }
+  .email{
+    background-image:url(../images/mail_blue.svg);
+    margin-left:30px;
+  }
+  .linkedin{
+    background-image:url(../images/linkedin_blue.svg);
+  }
+}
+#person-modal{
+  position:fixed;
+  top:0;right:0;bottom:0;left:0;
 }

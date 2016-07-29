@@ -47,7 +47,7 @@ get_header(); ?>
         <div class="team-container">
           <?php the_post_thumbnail();?>
           <div class="overlay">
-            <a class="whole-article" href="<?php the_permalink();?>"></a>
+            <a class="whole-article loader" href="<?php the_permalink();?>"></a>
             <?php
             if(get_field('email') || get_field('linkedin')){
               ?>
@@ -59,7 +59,7 @@ get_header(); ?>
               </ul>
               <h3><?php the_title(); ?></h3>
               <p><?php the_field('position');?></p>
-              <a class="button" href="<?php the_permalink();?>">View Profile</a>
+              <a class="button loader" href="<?php the_permalink();?>">View Profile</a>
             <?php } ?>
           </div>
         </div>
@@ -107,6 +107,10 @@ get_header(); ?>
       <?php endif;?>
     </div>
   </section>
+  <article id="person-modal" class="reveal full" data-reveal>
+    <button id="closebtn">&#215;</button>
+    <span id="puthere"></span>
+  </article>
 <?php endwhile; ?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 <script>
@@ -118,6 +122,19 @@ jQuery(document).ready(function($){
     arrows:false,
     animateHeight:true
   });
+});
+modal = $('#person-modal');
+$('a.loader').click(function(){
+  // modal = $('#' + $(this).attr("data-modal"));
+  modal = $('#person-modal');
+  modalcontainer = $('#puthere');
+  $(modalcontainer).load($(this).attr("href") + " #person-content", function(){
+    $(modal).fadeIn(200);
+  });
+  return false;
+});
+$('#closebtn').click(function(){
+  $(modal).fadeOut(200);
 });
 </script>
 </main>
