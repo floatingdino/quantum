@@ -1,4 +1,8 @@
 /* Navigation breakpoints */
+.menu-icon{
+  float:right;
+  margin-top:5px;
+}
 header#masthead{
   max-width:$global-width;
   margin:0 auto;
@@ -175,8 +179,12 @@ div.phone{
 .footer-links{
   clear:both;
   a{
-    line-height:70px !important;
+
+    // line-height:70px !important;
     padding:0 1rem;
+    @include breakpoint(medium){
+      line-height:70px !important;
+    }
   }
 
   div.phone{
@@ -205,4 +213,16 @@ div.title-bar-title a{
   width:170px;
   display:block;
   margin-left:5px;
+}
+.vertical.menu{
+  min-height:100vh;
+}
+.vertical.menu a{
+  text-align:center;
+  line-height:3.5;
+  height:auto;
+  font-size:30px;
+}
+.vertical.menu li:first-of-type{
+  margin-top:35px;
 }

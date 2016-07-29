@@ -2278,6 +2278,10 @@ select {
   Add your scss files below to structure your project styles
 */
 /* Navigation breakpoints */
+.menu-icon {
+  float: right;
+  margin-top: 5px; }
+
 header#masthead {
   max-width: 70rem;
   margin: 0 auto; }
@@ -2434,8 +2438,10 @@ div.phone {
 .footer-links {
   clear: both; }
   .footer-links a {
-    line-height: 70px !important;
     padding: 0 1rem; }
+    @media screen and (min-width: 40em) {
+      .footer-links a {
+        line-height: 70px !important; } }
   .footer-links div.phone {
     font-family: "acumin-pro-extra-condensed", "acumin-pro", Roboto, Arial, sans-serif;
     font-stretch: extra-condensed;
@@ -2466,6 +2472,18 @@ div.title-bar-title a {
   width: 170px;
   display: block;
   margin-left: 5px; }
+
+.vertical.menu {
+  min-height: 100vh; }
+
+.vertical.menu a {
+  text-align: center;
+  line-height: 3.5;
+  height: auto;
+  font-size: 30px; }
+
+.vertical.menu li:first-of-type {
+  margin-top: 35px; }
 
 #footer-container {
   max-width: 100%;
@@ -2499,7 +2517,8 @@ div.title-bar-title a {
       width: 100%;
       float: left;
       padding-left: 0.625rem;
-      padding-right: 0.625rem; }
+      padding-right: 0.625rem;
+      text-align: center; }
       @media screen and (min-width: 40em) {
         #footer-container #footer .half {
           padding-left: 0.9375rem;
@@ -2511,7 +2530,8 @@ div.title-bar-title a {
           width: 50%;
           float: left;
           padding-left: 0.625rem;
-          padding-right: 0.625rem; } }
+          padding-right: 0.625rem;
+          text-align: initial; } }
   @media screen and (min-width: 64em) and (min-width: 40em) {
     #footer-container #footer .half {
       padding-left: 0.9375rem;
@@ -2561,16 +2581,18 @@ div.title-bar-title a {
   height: 205px;
   width: 205px;
   display: inline-block;
-  margin-right: 40px;
   vertical-align: bottom; }
+  @media screen and (min-width: 40em) {
+    .quantum-star {
+      margin-right: 40px; } }
 
 .page-template-team #footer-container, .page-template-services #footer-container, .page-template-front #footer-container {
   margin-top: 0; }
 
 .legal {
-  margin: 50px 0 20px 0;
   font-size: 13px; }
   .legal .legal-menu {
+    margin: 50px 0 20px 0;
     float: left;
     opacity: 0.5; }
     .legal .legal-menu li a {
@@ -2589,7 +2611,7 @@ div.title-bar-title a {
   -webkit-background-size: contain;
           background-size: contain;
   float: right;
-  margin-right: 10px;
+  margin: 50px 10px 20px 0;
   display: block;
   color: transparent !important; }
 
@@ -3301,7 +3323,8 @@ body.blog {
   font-size: 1rem; }
   .page-resources ul.filters li, section.resources ul.filters li {
     display: inline-block;
-    padding: 0 10px; }
+    padding: 0 10px;
+    margin: 10px 0; }
     .page-resources ul.filters li:not(:last-child), section.resources ul.filters li:not(:last-child) {
       border-right: 1px solid #9b9b9b; }
     .page-resources ul.filters li.highlight, section.resources ul.filters li.highlight {
@@ -4226,5 +4249,35 @@ a.whole-article {
 
 .wpcf7-form p:first-of-type {
   padding-right: 10px; }
+
+article.person {
+  width: 990px;
+  max-width: 100%;
+  margin: 100px auto; }
+  article.person h1 {
+    color: #fe5205;
+    line-height: 0.8;
+    font-size: 70px; }
+  article.person h2 {
+    margin-top: 50px; }
+  article.person h3 {
+    font-size: 40px;
+    margin-bottom: 35px; }
+  article.person h1, article.person h2, article.person h3 {
+    font-style: italic; }
+  article.person p {
+    font-size: 18px; }
+  article.person strong {
+    margin: 10px 0;
+    display: inline-block; }
+  article.person .sidebar {
+    height: 100%;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    width: 30%; }
+  article.person div.right {
+    display: inline-block;
+    width: 69%; }
 
 /*# sourceMappingURL=foundation.css.map */

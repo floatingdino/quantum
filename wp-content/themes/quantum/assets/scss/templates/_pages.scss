@@ -801,3 +801,41 @@ a.whole-article{
     padding-right:10px;
   }
 }
+article.person{
+  width:990px;
+  max-width:100%;
+  margin:100px auto;
+  h1{
+    color:$orange;
+    line-height:0.8;
+    font-size:70px;
+  }
+  h2{
+    margin-top:50px;
+  }
+  h3{
+    font-size:40px;
+    margin-bottom:35px;
+  }
+  h1, h2, h3{
+    font-style:italic;
+  }
+  p{
+    font-size:18px;
+  }
+  strong{
+    margin:10px 0;
+    display:inline-block;
+  }
+  .sidebar{
+    height:100%;
+    display:inline-block;
+    float:none;
+    vertical-align: top;
+    width:30%;
+  }
+  div.right{
+    display:inline-block;
+    width:69%;
+  }
+}

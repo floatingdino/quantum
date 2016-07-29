@@ -42,6 +42,7 @@ body.blog{
     li{
       display:inline-block;
       padding:0 10px;
+      margin:10px 0;
       &:not(:last-child){
         border-right:1px solid $medium-gray;
       }
