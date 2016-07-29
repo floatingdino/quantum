@@ -9,11 +9,17 @@ get_header(); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
   <section class="top-hero" style="background-image:url(<?php the_field('hero');?>)">
+    <div class="header-content" style="visibility:hidden;padding-bottom:60px;">
+      <h1><?php the_field('header_title');?></h1>
+      <?php the_field('header_content');?>
+      <a class="button" href="/team">Find out how</a>
+    </div>
+  </section>
+  <section class="faux-top">
     <div class="header-content">
       <h1><?php the_field('header_title');?></h1>
       <?php the_field('header_content');?>
-      <!-- <a class="button" href="/about">Find out how</a> -->
-      <!-- button is unclickable due to being in a low z-index parent -->
+      <a class="button" href="/team">Find out how</a>
     </div>
   </section>
 	<?php if(have_rows('blocks')):?>
@@ -107,5 +113,10 @@ $('a.loader').click(function(){
 $('#closebtn').click(function(){
   $(modal).fadeOut(200);
 })
+// $(window).click(function(event){
+//   if(event.target == $('.entry-content')){
+//     $(modal).fadeOut(200);
+//   }
+// })
 </script>
 <?php get_footer();

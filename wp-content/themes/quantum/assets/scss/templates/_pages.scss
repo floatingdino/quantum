@@ -19,6 +19,13 @@
     left:0;
     z-index:0;
   }
+}
+.header-content{
+  width:$global-width;
+  max-width:100%;
+  padding:200px 10px 40px 10px;
+  z-index:1;
+  margin:0 auto;
   .button{
     background-color:transparent;
     border:1px solid $white;
@@ -28,16 +35,13 @@
     margin-top:25px;
     font-size:32px;
     padding:15px 35px;
-    position:absolute;
     z-index:999;
+    transition:background 0.2s, border 0.2s;;
+    &:hover{
+      background-color:$orange;
+      border-color:transparent;
+    }
   }
-}
-.header-content{
-  width:$global-width;
-  max-width:100%;
-  padding:200px 10px 40px 10px;
-  z-index:1;
-  margin:0 auto;
   h1{
     font-size:85px;
     line-height:0.8;
@@ -136,6 +140,7 @@ i.triangle{
     h2{
       font-style:italic;
       font-size:75px;
+      margin-bottom:40px;
     }
     p{
       line-height:1.8;
@@ -192,7 +197,10 @@ i.triangle{
       }
     }
     article{
-      @include grid-column(3);
+      @include grid-column(6);
+      @include breakpoint(430px){
+        @include grid-column(3);
+      }
       text-align:center;
       margin:40px 0;
     }
@@ -916,4 +924,10 @@ article.person-single{
 #person-modal{
   position:fixed;
   top:0;right:0;bottom:0;left:0;
+}
+section.faux-top{
+  width:100%;
+  position:absolute;
+  top:0;
+  z-index:1;
 }

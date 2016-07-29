@@ -3544,7 +3544,14 @@ div.brick-more, section.resources a.button {
     top: 0;
     left: 0;
     z-index: 0; }
-  .top-hero .button {
+
+.header-content {
+  width: 70rem;
+  max-width: 100%;
+  padding: 200px 10px 40px 10px;
+  z-index: 1;
+  margin: 0 auto; }
+  .header-content .button {
     background-color: transparent;
     border: 1px solid #fff;
     font-style: italic;
@@ -3553,15 +3560,12 @@ div.brick-more, section.resources a.button {
     margin-top: 25px;
     font-size: 32px;
     padding: 15px 35px;
-    position: absolute;
-    z-index: 999; }
-
-.header-content {
-  width: 70rem;
-  max-width: 100%;
-  padding: 200px 10px 40px 10px;
-  z-index: 1;
-  margin: 0 auto; }
+    z-index: 999;
+    -webkit-transition: background 0.2s, border 0.2s;
+    transition: background 0.2s, border 0.2s; }
+    .header-content .button:hover {
+      background-color: #fe5205;
+      border-color: transparent; }
   .header-content h1 {
     font-size: 85px;
     line-height: 0.8;
@@ -3671,7 +3675,8 @@ i.triangle:before {
   max-width: 100%; }
   .page-template-front section.middle h2 {
     font-style: italic;
-    font-size: 75px; }
+    font-size: 75px;
+    margin-bottom: 40px; }
   .page-template-front section.middle p {
     line-height: 1.8;
     margin-bottom: 2em; }
@@ -3726,7 +3731,7 @@ i.triangle:before {
           -ms-transform: scale(1);
               transform: scale(1); }
   .page-template-front section.featured-team article {
-    width: 25%;
+    width: 50%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
@@ -3738,6 +3743,19 @@ i.triangle:before {
         padding-right: 0.9375rem; } }
     .page-template-front section.featured-team article:last-child:not(:first-child) {
       float: right; }
+    @media screen and (min-width: 26.875em) {
+      .page-template-front section.featured-team article {
+        width: 25%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem; } }
+  @media screen and (min-width: 26.875em) and (min-width: 40em) {
+    .page-template-front section.featured-team article {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 26.875em) {
+        .page-template-front section.featured-team article:last-child:not(:first-child) {
+          float: right; } }
   .page-template-front section.featured-team a.button {
     margin: 0 auto 50px auto;
     display: block;
@@ -4448,5 +4466,11 @@ article.person-single {
   right: 0;
   bottom: 0;
   left: 0; }
+
+section.faux-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1; }
 
 /*# sourceMappingURL=foundation.css.map */
