@@ -928,6 +928,9 @@ article.person-single{
 section.faux-top{
   width:100%;
   position:absolute;
-  top:0;
+  top:120px;
   z-index:1;
+  .header-content{
+    padding-top:100px;
+  }
 }

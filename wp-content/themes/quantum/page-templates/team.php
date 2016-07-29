@@ -49,18 +49,18 @@ get_header(); ?>
           <div class="overlay">
             <a class="whole-article loader" href="<?php the_permalink();?>"></a>
             <?php
-            if(get_field('email') || get_field('linkedin')){
+            if(get_field('email') || get_field('linkedin')):
               ?>
-              <ul>
-                <?php if(get_field('linkedin'))
-                  echo '<a href="' . get_field('linkedin') . '"><li class="linkedin"></li></a>';?>
-                <?php if(get_field('email'))
-                  echo '<a href="mailto:' . get_field('email') . '"><li class="email"></li></a>';?>
-              </ul>
+                <ul>
+                  <?php if(get_field('linkedin'))
+                    echo '<a href="' . get_field('linkedin') . '"><li class="linkedin"></li></a>';?>
+                  <?php if(get_field('email'))
+                    echo '<a href="mailto:' . get_field('email') . '"><li class="email"></li></a>';?>
+                </ul>
+              <?php endif; ?>
               <h3><?php the_title(); ?></h3>
               <p><?php the_field('position');?></p>
               <a class="button loader" href="<?php the_permalink();?>">View Profile</a>
-            <?php } ?>
           </div>
         </div>
       </article>
