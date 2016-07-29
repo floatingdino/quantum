@@ -1,6 +1,9 @@
 .clear{
   clear:both;
 }
+h2{
+  line-height:1;
+}
 .top-hero{
   min-height:590px;
   width:100%;
@@ -73,7 +76,7 @@ i.triangle{
     max-width:100%;
     margin:-20px auto 0 auto;
     i.triangle:before{
-      color:$orange;
+      color:$white;
       font-size:25px;
     }
     .block{
@@ -81,8 +84,13 @@ i.triangle{
       position:relative;
       margin-top:-20px;
       padding-bottom:40px;
-      &:hover .orange-overlay{
-        opacity:0;
+      &:hover {
+        i.triangle:before{
+          color:$orange;
+        }
+        .orange-overlay{
+          opacity:0;
+        }
       }
       &:nth-of-type(3){
         padding-bottom:0;

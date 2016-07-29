@@ -16,6 +16,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://use.typekit.net/uhl5mzm.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<!-- <script src="https://use.typekit.net/sqv1cji.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script> -->
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

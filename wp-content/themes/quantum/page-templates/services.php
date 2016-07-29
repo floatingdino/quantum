@@ -169,7 +169,7 @@ get_header(); ?>
 
     </div>
   </section>
-  <section id="specialist">
+  <section id="advisory">
     <div class="section-header" style="background-image:url(<?php the_field('sa_head_image');?>)">
       <h1><?php the_field('sa_header');?></h1>
       <h2>Specialist Advisory <i class="triangle"></i></h2>
