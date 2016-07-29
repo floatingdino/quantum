@@ -24,6 +24,7 @@
 		<?php do_action( 'foundationpress_before_content' ); ?>
  		<?php while ( have_posts() ) : the_post(); ?>
  			<article class="<?php echo get_the_category()[0]->slug;?> item">
+        <a href="<?php the_permalink();?>">
 				<div class="article-body">
 	 				<?php
 					if(has_post_thumbnail()){
@@ -36,6 +37,7 @@
 	 					<p><?php the_excerpt();?></p>
 	 				</div>
 				</div>
+        </a>
  			</article>
 
  		<?php endwhile;?>
