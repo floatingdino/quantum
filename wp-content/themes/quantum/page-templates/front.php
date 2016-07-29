@@ -12,19 +12,21 @@ get_header(); ?>
     <div class="header-content">
       <h1><?php the_field('header_title');?></h1>
       <?php the_field('header_content');?>
+      <!-- <a class="button" href="/about">Find out how</a> -->
+      <!-- button is unclickable due to being in a low z-index parent -->
     </div>
   </section>
 	<?php if(have_rows('blocks')):?>
 		<section class="top-blocks">
 			<?php while(have_rows('blocks')):the_row();?>
 				<article class="block">
+          <a href="<?php the_sub_field('link'); ?>">
 					<div class="container" style="background-image:url(<?php the_sub_field('background_image');?>)">
-						<a href="<?php the_sub_field('link'); ?>">
 						<h2><?php the_sub_field('tag');?></h2>
 						<h3><?php the_sub_field('title');?> <i class="triangle"></i></h3>
-						</a>
             <div class="orange-overlay"></div>
 					</div>
+          </a>
 				</article>
 			<?php endwhile;?>
 			<div class="clear"></div>

@@ -3,7 +3,7 @@ body.blog{
 }
 .blog section.container, section.resources{
   position:relative;
-  z-index:-1;
+  z-index:1;
   &:before, &:after{
     content:'';
     position:absolute;
