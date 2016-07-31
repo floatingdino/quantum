@@ -23,7 +23,7 @@
 .header-content{
   width:$global-width;
   max-width:100%;
-  padding:200px 10px 40px 10px;
+  padding:200px 10px 100px 10px;
   z-index:1;
   margin:0 auto;
   .button{
@@ -272,6 +272,7 @@ a.button, input[type="submit"]{
 }
 .section-header{
   width:1080px;
+  max-width:100%;
   height:220px;
   background-color:$medium-gray;
   padding:20px 35px;
@@ -931,6 +932,9 @@ section.faux-top{
   top:120px;
   z-index:1;
   .header-content{
-    padding-top:100px;
+    padding-top:60px !important;
+    @include breakpoint(medium){
+      padding-top:100px !important;
+    }
   }
 }

@@ -9,7 +9,7 @@ get_header(); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
   <section class="top-hero" style="background-image:url(<?php the_field('hero');?>)">
-    <div class="header-content" style="visibility:hidden;padding-bottom:60px;">
+    <div class="header-content" style="visibility:hidden;">
       <h1><?php the_field('header_title');?></h1>
       <?php the_field('header_content');?>
       <a class="button" href="/team">Find out how</a>

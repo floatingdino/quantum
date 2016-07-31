@@ -80,7 +80,7 @@ get_header(); ?>
       </div>
       <?php if(have_rows('sa_related')): ?>
         <div class="related-posts">
-        <?php while(have_rows('sa_related')):the_row() ?>
+        <?php while(have_rows('ta_related')):the_row() ?>
           <?php $post_object =  get_sub_field('related_post');
             $post = $post_object;
             setup_postdata($post);
