@@ -72,7 +72,7 @@ get_header(); ?>
 		$loop = new WP_Query($args);
 		while($loop->have_posts()):$loop->the_post();	?>
 		<article class="<?php echo get_the_category()[0]->slug;?> item">
-      <a href="<? the_permalink();?>">
+      <a href="<?php the_permalink();?>">
 			<div class="article-body">
 				<?php
 				if(has_post_thumbnail()){
