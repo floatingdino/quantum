@@ -47,7 +47,6 @@
 				</div>
 				<div class="top-bar-right">
 					<?php foundationpress_top_bar_r();?>
-					<!-- <div class="phone"> 1300 123 456</div> -->
 					<?php wp_nav_menu(array('container_class'=>'social-menu', 'theme_location'=>'social-top'));?>
 
 					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>

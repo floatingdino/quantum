@@ -1,7 +1,6 @@
 wp-content/themes/twentysixteen
 wp-config.production.php
 wp-config.staging.php
-wp-content/themes/quantum/node_modules
 .DS_Store
 .sass-cache
 node_modules
