@@ -3,3 +3,4 @@ wp-config.production.php
 wp-config.staging.php
 .DS_Store
 .sass-cache
+node_modules
