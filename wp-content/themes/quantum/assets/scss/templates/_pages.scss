@@ -167,6 +167,7 @@ i.triangle{
         h2{
           font-size:60px;
           width:193px;
+          max-width:100%;
           @include breakpoint(medium only){
             font-size:42px;
           }
