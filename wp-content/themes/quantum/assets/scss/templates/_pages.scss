@@ -734,7 +734,7 @@ article.team-person{
   }
 }
 section.careers{
-  overflow:hidden;
+  // overflow:hidden;
   .section-intro{
     margin-top:-30px;
     @include breakpoint(1100px){
@@ -756,7 +756,7 @@ section.careers{
     background-size:contain;
     background-image:url('../images/bottom_right_geo.svg');
     bottom:-70px;
-    right:-30px;
+    right:0px;
   }
   article.team-person{
     width:100%;
@@ -784,7 +784,7 @@ section.partners{
     margin:0 auto;
     position:relative;
     z-index:0;
-    overflow:hidden;
+    // overflow:;
     &:before, &:after{
       content:"";
       position:absolute;
@@ -795,7 +795,7 @@ section.partners{
     &:before{
       width:317px;
       height:329px;
-      right:-30px;
+      right:0px;
       top:-50px;
       background-image:url(../images/top_right_colour_geo.svg);
     }
