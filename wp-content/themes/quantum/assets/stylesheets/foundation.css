@@ -2375,6 +2375,26 @@ html.is-reveal-open body {
 .menu-icon {
   float: right;
   margin-top: 5px; }
+  .menu-icon:after {
+    color: transparent;
+    content: '\00d7';
+    -webkit-transition: color 0.2s, font-size 0.2s ease-in, background-color 0.2s 0.2s, -webkit-box-shadow 0.2s 0.2s ease-out;
+    transition: color 0.2s, font-size 0.2s ease-in, background-color 0.2s 0.2s, -webkit-box-shadow 0.2s 0.2s ease-out;
+    transition: color 0.2s, font-size 0.2s ease-in, background-color 0.2s 0.2s, box-shadow 0.2s 0.2s ease-out;
+    transition: color 0.2s, font-size 0.2s ease-in, background-color 0.2s 0.2s, box-shadow 0.2s 0.2s ease-out, -webkit-box-shadow 0.2s 0.2s ease-out;
+    font-size: 5px;
+    line-height: 20px;
+    text-align: center; }
+  .menu-icon.cross:after {
+    color: #143c6e;
+    background-color: transparent;
+    font-size: 30px;
+    -webkit-box-shadow: 0 0px 0 transparent, 0 0px 0 transparent;
+            box-shadow: 0 0px 0 transparent, 0 0px 0 transparent;
+    -webkit-transition: color 0.2s 150ms, font-size 0.2s 150ms ease-out, background-color 0.2s, -webkit-box-shadow 0.2s ease-out;
+    transition: color 0.2s 150ms, font-size 0.2s 150ms ease-out, background-color 0.2s, -webkit-box-shadow 0.2s ease-out;
+    transition: color 0.2s 150ms, font-size 0.2s 150ms ease-out, background-color 0.2s, box-shadow 0.2s ease-out;
+    transition: color 0.2s 150ms, font-size 0.2s 150ms ease-out, background-color 0.2s, box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out; }
 
 header#masthead {
   max-width: 70rem;
@@ -3210,7 +3230,6 @@ form#subscribe {
     background-color: #fe5205;
     color: #fff;
     font-weight: bold;
-    max-width: 200px;
     width: 200px;
     text-align: center; }
   @media screen and (max-width: 63.9375em) {
@@ -3218,6 +3237,10 @@ form#subscribe {
       width: 70%; }
     form#subscribe input[type="submit"] {
       width: 30%; } }
+  @media screen and (max-width: 39.9375em) {
+    form#subscribe input, form#subscribe input[type="submit"] {
+      width: 100%;
+      margin: 10px 0; } }
 
 #page {
   max-width: 70rem;
@@ -3686,14 +3709,23 @@ i.triangle:before {
       .page-template-front section.top-blocks .block div.container h2 {
         font-size: 60px;
         width: 193px; }
+        @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+          .page-template-front section.top-blocks .block div.container h2 {
+            font-size: 42px; } }
       .page-template-front section.top-blocks .block div.container h3 {
         font-size: 38px; }
+        @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+          .page-template-front section.top-blocks .block div.container h3 {
+            font-size: 30px; } }
 
 .page-template-front section.middle {
   width: 70rem;
-  margin: 150px auto 60px auto;
+  margin: 50px auto 60px auto;
   padding: 0 20px;
   max-width: 100%; }
+  @media screen and (min-width: 64em) {
+    .page-template-front section.middle {
+      margin: 150px auto 60px auto; } }
   .page-template-front section.middle h2 {
     font-style: italic;
     font-size: 75px;

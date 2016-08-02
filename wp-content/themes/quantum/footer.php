@@ -42,6 +42,7 @@
 <script>
 $("button.menu-icon").click(function(){
   $("#mobile-menu").toggle();
+	$("button.menu-icon").toggleClass("cross");
 });
 </script>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>

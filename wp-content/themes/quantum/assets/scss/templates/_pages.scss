@@ -158,16 +158,25 @@ i.triangle{
         h2{
           font-size:60px;
           width:193px;
+          @include breakpoint(medium only){
+            font-size:42px;
+          }
         }
         h3{
           font-size:38px;
+          @include breakpoint(medium only){
+            font-size:30px;
+          }
         }
       }
     }
   }
   section.middle{
     width:$global-width;
-    margin:150px auto 60px auto;
+    margin:50px auto 60px auto;
+    @include breakpoint(large){
+      margin:150px auto 60px auto;
+    }
     padding:0 20px;
     max-width:100%;
     h2{

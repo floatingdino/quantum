@@ -2,6 +2,21 @@
 .menu-icon{
   float:right;
   margin-top:5px;
+  &:after{
+    color:transparent;
+    content:'\00d7';
+    transition:color 0.2s, font-size 0.2s ease-in, background-color 0.2s 0.2s, box-shadow 0.2s 0.2s ease-out;
+    font-size:5px;
+    line-height:20px;
+    text-align:center;
+  }
+  &.cross:after{
+    color:$navy;
+    background-color:transparent;
+    font-size:30px;
+    box-shadow:0 0px 0 transparent, 0 0px 0 transparent;
+    transition:color 0.2s 150ms, font-size 0.2s 150ms ease-out, background-color 0.2s, box-shadow 0.2s ease-out;
+  }
 }
 header#masthead{
   max-width:$global-width;

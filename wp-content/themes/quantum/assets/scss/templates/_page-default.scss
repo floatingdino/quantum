@@ -34,7 +34,7 @@ form#subscribe{
     background-color:$orange;
     color:$white;
     font-weight:bold;
-    max-width:200px;
+    // max-width:200px;
     width:200px;
     text-align:center;
     // line-height:65px;
@@ -46,6 +46,12 @@ form#subscribe{
     }
     input[type="submit"]{
       width:30%;
+    }
+  }
+  @include breakpoint(small only){
+    input, input[type="submit"]{
+      width:100%;
+      margin:10px 0;
     }
   }
 
