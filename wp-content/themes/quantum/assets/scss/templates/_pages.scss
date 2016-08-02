@@ -734,6 +734,7 @@ article.team-person{
   }
 }
 section.careers{
+  overflow:hidden;
   .section-intro{
     margin-top:-30px;
     @include breakpoint(1100px){
@@ -783,6 +784,7 @@ section.partners{
     margin:0 auto;
     position:relative;
     z-index:0;
+    overflow:hidden;
     &:before, &:after{
       content:"";
       position:absolute;
