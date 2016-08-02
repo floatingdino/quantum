@@ -92,6 +92,10 @@
     margin:0;
     width:580px;
     max-width:100%;
+    @include breakpoint(small only){
+      display:block;
+      margin:0 auto;
+    }
   }
 
   @include breakpoint(small only) {
