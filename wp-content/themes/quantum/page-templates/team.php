@@ -101,7 +101,9 @@ get_header(); ?>
       if(have_rows('partner')):?>
       <div class="partner-logos">
         <?php while(have_rows('partner')):the_row();?>
-          <div class="partner" style="background-image:url(<?php the_sub_field('image');?>)"></div>
+          <div class="partner">
+            <img src="<?php the_sub_field('image');?>">
+          </div>
         <?php endwhile;?>
       </div>
       <div class="clear"></div>

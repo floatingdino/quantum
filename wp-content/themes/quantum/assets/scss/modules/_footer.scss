@@ -91,9 +91,12 @@
 .legal{
 	font-size:13px;
 	.legal-menu{
-		margin:50px 0 20px 0;
-		float:left;
 		opacity:0.5;
+		margin:20px auto;
+		@include breakpoint(medium){
+			float:left;
+			margin:50px 0 20px 0;
+		}
 		li a{
 			position:relative;
 		}
@@ -108,11 +111,14 @@
 .ply{
 	background-image:url(../images/ply.svg);
 	height:30px;
-	width:140px;
 	background-repeat:no-repeat;
 	background-size:contain;
-	float:right;
-	margin:50px 10px 20px 0;
 	display:block;
 	color:transparent !important;
+	background-position:center center;
+	@include breakpoint(medium){
+		float:right;
+		width:140px;
+		margin:50px 10px 20px 0;
+	}
 }

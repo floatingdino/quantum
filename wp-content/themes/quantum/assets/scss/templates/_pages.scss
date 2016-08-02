@@ -40,7 +40,15 @@
     }
   }
 }
-
+.home .header-content p{
+  width:480px;
+}
+.page-template-team .header-content p{
+  width:400px;
+}
+.page-template-services .header-content p{
+  width:600px;
+}
 .header-content{
   width:$global-width;
   max-width:100%;
@@ -82,6 +90,7 @@
     font-size:20px;
     line-height:30px;
     margin:0;
+    width:580px;
   }
 
   @include breakpoint(small only) {
@@ -322,11 +331,14 @@ a.button, input[type="submit"]{
   height:220px;
   background-color:$medium-gray;
   padding:20px 35px;
-  margin:60px auto 100px auto;
+  margin:0 auto 100px auto;
   background-size: cover;
   background-repeat:no-repeat;
   color:$white;
   position:relative;
+  @include breakpoint(medium){
+    margin-top:60px;
+  }
   i:before{
     color:$orange;
     font-size:70%;
@@ -354,7 +366,7 @@ a.button, input[type="submit"]{
   margin-bottom:100px;
   .subservice{
     margin-bottom:40px;
-    @include grid-column(6);
+    @include grid-column(12);
     @include breakpoint(medium) {
       @include grid-column(4);
     }
@@ -495,6 +507,10 @@ section.testimonies{
     margin:0 auto;
     z-index:1;
     height:100%;
+    display:none;
+    @include breakpoint(medium){
+      display:block;
+    }
     &:before, &:after{
       content:'';
       position:absolute;
@@ -609,10 +625,12 @@ article.team-person{
   h3{
     color:$orange;
     font-size:40px;
+    line-height:0.8;
     font-style:italic;
     position:absolute;
     bottom:15px;
     left:15px;
+    right:15px;
     a{
       color:inherit;
     }
@@ -621,6 +639,7 @@ article.team-person{
     }
     @include breakpoint(medium){
       position:static;
+      line-height:1.5;
     }
 
   }
@@ -733,12 +752,17 @@ section.careers{
     right:-30px;
   }
   article.team-person{
+    width:100%;
+    @include breakpoint(medium){
+      width:25%;
+    }
     h3, p{
       padding:0 15px;
       line-height:1;
     }
     h3{
       margin:80px 0 10px 0;
+      // font-size:25px;
     }
   }
 }
@@ -798,12 +822,17 @@ section.partners{
     height:80px;
     margin-bottom:30px;
     float:left;
-    background-repeat:no-repeat;
-    background-position:center center;
-    box-sizing: border-box;
-    // background-size:contain;
     border:0 solid $medium-gray;
     border-width:0 1px 0 0;
+    position:relative;
+    img{
+      max-width:100%;
+      max-height:100%;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+    }
     &:nth-of-type(1), &:nth-of-type(5), &:nth-of-type(9), &:nth-of-type(13){
       border-width:0 1px;
     }

@@ -13,15 +13,16 @@ main{
 .highlight{
   color:$orange;
 }
-input{
+input[type='submit']{
   border:none !important;
 }
 form#subscribe{
   display:block;
   max-width:100%;
-  width:840px;
+  width:860px;
   float:right;
   margin:60px 0;
+  padding:0 10px;
   input{
     display:inline-block;
     height:65px;
@@ -29,6 +30,7 @@ form#subscribe{
     width:640px;
     vertical-align: top;
     padding:20px;
+    border:none !important;
   }
   input[type="submit"]{
     background-color:$orange;
@@ -38,6 +40,9 @@ form#subscribe{
     width:200px;
     text-align:center;
     // line-height:65px;
+    &:hover{
+      background-color:darken($orange,10%);
+    }
   }
 
   @include breakpoint(medium down){
@@ -49,6 +54,7 @@ form#subscribe{
     }
   }
   @include breakpoint(small only){
+    margin:30px 0;
     input, input[type="submit"]{
       width:100%;
       margin:10px 0;
