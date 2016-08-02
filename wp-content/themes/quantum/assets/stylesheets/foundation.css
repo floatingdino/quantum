@@ -3546,12 +3546,27 @@ div.brick-more, section.resources a.button {
     top: 0;
     left: 0;
     z-index: 0; }
+  @media screen and (max-width: 39.9375em) {
+    .top-hero {
+      background-position: center right -100px;
+      height: auto;
+      min-height: 0;
+      text-align: center; }
+      .top-hero .header-color {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        opacity: 0.85;
+        z-index: -1; } }
 
 .header-content {
   width: 70rem;
   max-width: 100%;
   padding: 200px 10px 100px 10px;
-  z-index: 1;
+  z-index: 2;
   margin: 0 auto; }
   .header-content .button {
     background-color: transparent;
@@ -3561,7 +3576,7 @@ div.brick-more, section.resources a.button {
     font-family: "acumin-pro-extra-condensed", "acumin-pro", Roboto, Arial, sans-serif;
     margin-top: 25px;
     font-size: 32px;
-    padding: 15px 35px;
+    padding: 15px 35px 18px;
     z-index: 999;
     -webkit-transition: background 0.2s, border 0.2s;
     transition: background 0.2s, border 0.2s; }
@@ -3584,6 +3599,10 @@ div.brick-more, section.resources a.button {
     font-size: 20px;
     line-height: 30px;
     margin: 0; }
+  @media screen and (max-width: 39.9375em) {
+    .header-content .button {
+      border-color: #143c6e;
+      color: #143c6e; } }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   i.triangle {
@@ -3834,7 +3853,11 @@ a.button, input[type="submit"] {
   padding: 15px 25px;
   line-height: 1;
   display: inline-block;
-  font-size: 20px; }
+  font-size: 18px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease; }
+  a.button:hover, input[type="submit"]:hover {
+    background: #e94901; }
 
 .section-header {
   width: 1080px;

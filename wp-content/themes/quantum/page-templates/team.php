@@ -13,6 +13,7 @@ get_header(); ?>
       <h1><?php the_field('header_title');?></h1>
       <?php the_field('header_content');?>
     </div>
+    <div class="header-color"></div>
   </section>
   <section class="content">
     <?php the_content();?>
